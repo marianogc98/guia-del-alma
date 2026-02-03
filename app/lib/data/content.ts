@@ -43,15 +43,15 @@ export const metodoCrea = {
   pilares: [
     {
       title: "Constelaciones Familiares y Sistémicas",
-      text: "Para comprender los movimientos invisibles del sistema y el origen de los conflictos que hoy se manifiestan.",
+      text: "Un espacio cuidado para trabajar en profundidad dentro del campo sistémico.",
     },
     {
       title: "Biodecodificación y Reprogramación Bioneuroemocional y Biológica",
-      text: "Orientadas a liberar memorias emocionales y mentales que condicionan decisiones, vínculos y estados internos.",
+      text: "Orientadas a identificar y reprogramar las memorias emocionales, mentales y su impacto en nuestra salud.",
     },
     {
       title: "Lectura Akáshica aplicada al proceso terapéutico",
-      text: "Junto a otras herramientas de acompañamiento consciente, que se integran de acuerdo a lo que el momento y el alma necesitan.",
+      text: "Utilizo la lectura Akáshica como un campo de información al que accedo para aportar claridad sobre lo que está activo en el presente, acompañando el proceso de comprensión, sanación y transformación de cada persona.",
     },
   ],
   cierre:

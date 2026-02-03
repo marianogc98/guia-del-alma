@@ -25,7 +25,7 @@ export default function Header() {
           href="/"
           className="font-serif text-xl font-semibold text-[var(--color-primary-dark)] transition-colors hover:text-[var(--color-primary)] md:text-2xl"
         >
-          Guía del Alma
+          Jessica Frutos Guía del Alma
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
