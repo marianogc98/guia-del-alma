@@ -20,8 +20,8 @@ export default function Footer() {
               Guía del Alma
             </h3>
             <p className="text-sm text-white/80">
-              Acompañamiento consciente: Método C.R.E.A., constelaciones
-              familiares y sanación emocional. Presencial en Córdoba y online.
+            Método C.R.E.A., Constelaciones Familiares,
+             Reprogramación Bioneuroemocional y Biológica, Sanación Akáshica
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/20 pt-8 text-center text-sm text-white/60">
-          © {new Date().getFullYear()} Guía del Alma. Todos los derechos
+          © {new Date().getFullYear()} Jessica Frutos | Guía del Alma. Todos los derechos
           reservados.
         </div>
       </div>

@@ -7,7 +7,7 @@ export const hero = {
   headline:
     "Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades",
   subheadline:
-    "Método C.R.E.A. · Constelaciones Familiares · Sanación emocional",
+    "Método C.R.E.A. · Constelaciones Familiares · Reprogramación Bioneuroemocional y Biológica · Sanación Akáshica",
   subheadline2:
     "Sesiones individuales, procesos personalizados y constelaciones en grupos reducidos",
   ubicacion: "Presencial en Córdoba Capital y modalidad online",
