@@ -33,6 +33,7 @@ const fadeUp = {
 };
 
 const iconByFormato = {
+  intensivo: Sparkles,
   individuales: User,
   "proceso-crea": Calendar,
   constelaciones: Users,
@@ -268,22 +269,24 @@ export default function HomePage() {
           >
             {formatosAcompanamiento.title}
           </motion.h2>
-          {/* Grid 6 columnas: fila 1 = Sesiones C.R.E.A. (6 cols), fila 2 = Individuales (3) + Constelaciones (3) */}
+          {/* Grid: Intensivo y Proceso C.R.E.A. (6 cols), Individuales + Constelaciones (3+3) */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-6">
             {[
-              formatosAcompanamiento.bloques[1],
               formatosAcompanamiento.bloques[0],
               formatosAcompanamiento.bloques[2],
+              formatosAcompanamiento.bloques[1],
+              formatosAcompanamiento.bloques[3],
             ].map((bloque, i) => {
               const Icon =
                 iconByFormato[bloque.id as keyof typeof iconByFormato] ?? Heart;
-              const isProcesoCrea = bloque.id === "proceso-crea";
+              const isFullWidth =
+                bloque.id === "proceso-crea" || bloque.id === "intensivo";
               return (
                 <motion.article
                   key={bloque.id}
                   className={cn(
                     "flex flex-col rounded-2xl border border-[var(--color-primary)]/10 bg-white p-8 shadow-sm",
-                    isProcesoCrea ? "lg:col-span-6" : "lg:col-span-3"
+                    isFullWidth ? "lg:col-span-6" : "lg:col-span-3"
                   )}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

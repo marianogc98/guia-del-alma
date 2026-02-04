@@ -75,9 +75,29 @@ export const queSePuedeTrabajar = {
     "Todo aquello que hoy se expresa como síntoma, conflicto o repetición puede ser una puerta hacia una comprensión más profunda.",
 } as const;
 
+export const intensivo = {
+  title: "Creando Mi Nuevo Yo · Programa intensivo",
+  subtitle:
+    "Programa intensivo de creación consciente de un nuevo estado del ser",
+  descripcion:
+    "Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. No es un espacio para «arreglar» lo que está mal: es un proceso para comprender desde dónde estás creando tu vida hoy y elegir conscientemente un nuevo estado interno. Cuando cambia el estado del ser, la realidad inevitablemente se transforma.",
+  detalle:
+    "A lo largo de 3 encuentros semanales se recorre un proceso profundo y ordenado que permite reprogramar las tres dimensiones desde las cuales se crea la experiencia de vida: las memorias del alma (origen de la identidad actual), la mente (creencias que sostienen la percepción) y el cuerpo y la acción (donde se expresa o se limita el poder de elección). Integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL como experiencia consciente. No se trata de entender más; se trata de ser distinto.",
+  frecuencia: "Se ofrece dos veces al año",
+  cta: "👉 Consultar próximas fechas por WhatsApp",
+} as const;
+
 export const formatosAcompanamiento = {
   title: "Formas de acompañamiento",
   bloques: [
+    {
+      id: "intensivo",
+      titulo: intensivo.title,
+      descripcion: intensivo.descripcion,
+      detalle: intensivo.detalle,
+      extra: intensivo.frecuencia,
+      cta: intensivo.cta,
+    },
     {
       id: "individuales",
       titulo: "Encuentros Individuales (1:1)",

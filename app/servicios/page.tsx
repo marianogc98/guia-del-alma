@@ -1,9 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, Users, Calendar, MapPin, Clock } from "lucide-react";
+import { User, Users, Calendar, Sparkles, MapPin, Clock } from "lucide-react";
+import { intensivo } from "@/app/lib/data/content";
 
 const formas = [
+  {
+    icon: Sparkles,
+    title: intensivo.title,
+    description: intensivo.descripcion,
+    extra: intensivo.frecuencia,
+    cta: "Consultar próximas fechas por WhatsApp",
+  },
   {
     icon: User,
     title: "Encuentros Individuales (1:1)",

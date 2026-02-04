@@ -71,6 +71,14 @@ Todo aquello que hoy se expresa como síntoma, conflicto o repetición puede ser
 
 ## 6. FORMAS DE ACOMPAÑAMIENTO
 
+### Creando Mi Nuevo Yo · Programa intensivo (dos veces al año)
+
+Programa intensivo de creación consciente de un nuevo estado del ser. Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. Tres encuentros semanales; integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL. Se ofrece dos veces al año.
+
+**CTA:** 👉 Consultar próximas fechas por WhatsApp
+
+---
+
 ### Encuentros Individuales (1:1)
 
 El encuentro individual es un espacio terapéutico íntimo, profundo y completamente personalizado, creado para acompañarte en un proceso uno a uno, donde tu historia, tu momento y tu necesidad son el centro.
