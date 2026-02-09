@@ -141,7 +141,21 @@ Si sentís que este proceso es para vos, escribime y vemos juntos cuál es el es
 
 ---
 
-## 10. ELEMENTOS FIJOS (UX / Conversión)
+## 10. EXPERIENCIAS (Reviews)
+
+Testimonios que se muestran en la sección Contacto + Experiencias (slider en desktop, lista en móvil).
+
+| Autor   | Subtítulo                          | Mensaje |
+|--------|-------------------------------------|--------|
+| María G. | Proceso C.R.E.A. · 4 encuentros    | Tiene una forma de ver las partes de una que uno mismo tenía ocultas. El acompañamiento no solo me ayudó a ordenar mi historia; cambió cómo me despierto cada día. |
+| Laura S. | Constelaciones Familiares Exclusivas | Las constelaciones en grupo reducido fueron un antes y un después. Por primera vez pude mirar mi sistema familiar con claridad y sin juicio. |
+| Andrea R. | Encuentros individuales           | Vine por un síntoma que se repetía y me encontré con un proceso que tocó el origen. Hoy siento que puedo elegir desde otro lugar. |
+
+Los datos se editan en `app/lib/data/content.ts` (export `reviews`).
+
+---
+
+## 11. ELEMENTOS FIJOS (UX / Conversión)
 
 - Botón WhatsApp flotante (siempre visible)
 - CTA repetido cada 2–3 bloques

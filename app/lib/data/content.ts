@@ -8,10 +8,7 @@ export const hero = {
     "Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades",
   subheadline:
     "Método C.R.E.A. · Constelaciones Familiares · Reprogramación Bioneuroemocional y Biológica · Sanación Akáshica",
-  subheadline2:
-    "Sesiones individuales, procesos personalizados y constelaciones en grupos reducidos",
-  ubicacion: "Presencial en Córdoba Capital y modalidad online",
-  cta: "👉 Escribime por WhatsApp y coordinamos tu encuentro",
+  cta: "Coordinemos tu encuentro",
 } as const;
 
 export const tePasaQue = {
@@ -89,6 +86,7 @@ export const intensivo = {
 
 export const formatosAcompanamiento = {
   title: "Formas de acompañamiento",
+  subtitle: "Elegí el espacio que resuene con lo que necesitás hoy. Cada encuentro es un lugar cuidado para tu proceso.",
   bloques: [
     {
       id: "intensivo",
@@ -107,7 +105,7 @@ export const formatosAcompanamiento = {
         "Durante el encuentro exploramos qué se está expresando a través de un síntoma, emoción, conflicto vincular o situación repetitiva, para lograr una comprensión clara de su origen y de las dinámicas que hoy se manifiestan en tu presente. Luego realizamos el trabajo de integración, liberación y reprogramación consciente, buscando restablecer el orden interno y habilitar nuevas posibilidades.",
       duracion: "Duración: 1 hora",
       modalidad: "Modalidad: presencial en Córdoba Capital u online",
-      cta: "👉 Consultar disponibilidad por WhatsApp",
+      cta: "Me interesa",
     },
     {
       id: "proceso-crea",
@@ -118,7 +116,7 @@ export const formatosAcompanamiento = {
         "Cada sesión tiene una duración de 1 hora y el recorrido se desarrolla de forma personalizada, respetando la historia, el momento vital y el ritmo de cada persona. A lo largo del proceso se integran, según lo que cada etapa requiera: Constelaciones Familiares y Sistémicas, Biodecodificación y Reprogramación Bioneuroemocional, Lectura Akáshica aplicada al proceso terapéutico, Ejercicios y meditaciones de integración, Análisis del árbol generacional y memorias emocionales. Los días y la frecuencia de los encuentros se acuerdan previamente, favoreciendo un seguimiento continuo, consciente y respetuoso.",
       nota:
         "Este proceso no busca abordar síntomas de manera aislada, sino comprender, liberar y reordenar las memorias emocionales, mentales, biológicas y álmicas que hoy se expresan como conflicto o malestar, habilitando un nuevo estado de coherencia interna.",
-      cta: "👉 Solicitar información por WhatsApp",
+      cta: "Me interesa",
     },
     {
       id: "constelaciones",
@@ -143,7 +141,7 @@ export const procesoCreaFoco = {
     "Cada sesión tiene una duración de 1 hora y el recorrido se desarrolla de forma personalizada, respetando la historia, el momento vital y el ritmo de cada persona. A lo largo del proceso se integran, según lo que cada etapa requiera: Constelaciones Familiares y Sistémicas, Biodecodificación y Reprogramación Bioneuroemocional, Lectura Akáshica aplicada al proceso terapéutico, Ejercicios y meditaciones de integración, Análisis del árbol generacional y memorias emocionales. Los días y la frecuencia de los encuentros se acuerdan previamente, favoreciendo un seguimiento continuo, consciente y respetuoso.",
   paraQuien:
     "Este proceso no busca abordar síntomas de manera aislada, sino comprender, liberar y reordenar las memorias emocionales, mentales, biológicas y álmicas que hoy se expresan como conflicto o malestar, habilitando un nuevo estado de coherencia interna.",
-  cta: "👉 Solicitar información por WhatsApp",
+  cta: "Me interesa",
 } as const;
 
 export const quienAcompana = {
@@ -154,13 +152,40 @@ export const quienAcompana = {
     "Los cupos son limitados para poder ofrecer un acompañamiento presente, respetuoso y personalizado.",
 } as const;
 
-export const cierre = {
-  title:
-    "Todo lo que llega es una oportunidad para mirarte, ordenarte y crear algo nuevo",
-  parrafo:
-    "Si sentís que este proceso es para vos, escribime y vemos juntos cuál es el espacio más adecuado para acompañarte en este momento.",
-  cta: "👉 Contactarme por WhatsApp",
-} as const;
+/**
+ * Reviews / Experiencias. Estructura según reviews.md:
+ * name, date (texto para ordenar), rating (1–5), message.
+ * Opcional: subtitle (ej. tipo de acompañamiento).
+ */
+export const reviews = [
+  {
+    id: "maria-g",
+    name: "María G.",
+    date: "Enero 2026",
+    rating: 5,
+    message:
+      "Tiene una forma de ver las partes de una que uno mismo tenía ocultas. El acompañamiento no solo me ayudó a ordenar mi historia; cambió cómo me despierto cada día.",
+    subtitle: "Proceso C.R.E.A. · 4 encuentros",
+  },
+  {
+    id: "laura-s",
+    name: "Laura S.",
+    date: "Diciembre 2025",
+    rating: 5,
+    message:
+      "Las constelaciones en grupo reducido fueron un antes y un después. Por primera vez pude mirar mi sistema familiar con claridad y sin juicio.",
+    subtitle: "Constelaciones Familiares Exclusivas",
+  },
+  {
+    id: "andrea-r",
+    name: "Andrea R.",
+    date: "Noviembre 2025",
+    rating: 5,
+    message:
+      "Vine por un síntoma que se repetía y me encontré con un proceso que tocó el origen. Hoy siento que puedo elegir desde otro lugar.",
+    subtitle: "Encuentros individuales",
+  },
+] as const;
 
 /** IDs de secciones para anclas y navegación */
 export const sectionIds = {

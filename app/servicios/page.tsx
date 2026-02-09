@@ -35,7 +35,7 @@ const formas = [
     title: "Proceso C.R.E.A. – Acompañamiento de 4 encuentros",
     description:
       "Un proceso profundo y sostenido en el tiempo, diseñado para quienes desean un trabajo de transformación personal con continuidad y seguimiento. Cada sesión se adapta a la evolución del proceso, integrando distintas herramientas según lo que el momento requiera.",
-    cta: "Solicitar información por WhatsApp",
+    cta: "Me interesa",
   },
 ];
 
