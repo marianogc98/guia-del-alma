@@ -35,7 +35,7 @@ export const miradaIntegral = {
 export const metodoCrea = {
   title: "¿Qué es el Método C.R.E.A.?",
   intro:
-    "Trabajo desde mi propio método de acompañamiento consciente, al que denominé **C.R.E.A.**, que integra distintas herramientas terapéuticas según lo que cada proceso requiere.",
+    "C.R.E.A. es mi método personal aplicado para un abordaje integral que une la mirada sistémica de las Constelaciones Familiares, la reprogramación bioneuroemocional y biológica para acompañar procesos reales de Transformación.",
   subtitle: "El Método C.R.E.A. combina:",
   pilares: [
     {
@@ -52,7 +52,7 @@ export const metodoCrea = {
     },
   ],
   cierre:
-    "Este abordaje permite no solo comprender por qué vivís lo que vivís o sentís lo que sentís, sino dar un paso más: **reordenar y reprogramar la información interna** para habilitar nuevas posibilidades.",
+    "",
 } as const;
 
 export const queSePuedeTrabajar = {
@@ -73,16 +73,17 @@ export const queSePuedeTrabajar = {
 } as const;
 
 export const intensivo = {
-  title: "Creando Mi Nuevo Yo · Programa intensivo",
+  title: "Creando Mi Nuevo YO · Programa intensivo",
   subtitle:
     "Programa intensivo de creación consciente de un nuevo estado del ser",
   descripcion:
     "Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. No es un espacio para «arreglar» lo que está mal: es un proceso para comprender desde dónde estás creando tu vida hoy y elegir conscientemente un nuevo estado interno. Cuando cambia el estado del ser, la realidad inevitablemente se transforma.",
   detalle:
     "A lo largo de 3 encuentros semanales se recorre un proceso profundo y ordenado que permite reprogramar las tres dimensiones desde las cuales se crea la experiencia de vida: las memorias del alma (origen de la identidad actual), la mente (creencias que sostienen la percepción) y el cuerpo y la acción (donde se expresa o se limita el poder de elección). Integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL como experiencia consciente. No se trata de entender más; se trata de ser distinto.",
-  frecuencia: "Se ofrece dos veces al año",
-  cta: "👉 Consultar próximas fechas por WhatsApp",
-} as const;
+  frecuencia: "2 encuentros anuales. Días sábados de 18 a 20Hs.",
+  modalidad: "Modalidad: Online. Incluye 1 encuentro virtual en vivo por semana + material de trabajo para imprimir",
+  cta: "Consultar próximas fechas por WhatsApp",
+} as const ;
 
 export const formatosAcompanamiento = {
   title: "Formas de acompañamiento",
@@ -126,8 +127,8 @@ export const formatosAcompanamiento = {
       detalle:
         "Todos los participantes constelan. Al desarrollarse dentro de un campo de resonancia sistémica, el grupo se conecta de manera precisa a través de las historias personales y del sistema familiar, potenciando los movimientos de conciencia y sanación individuales y colectivos. Se integran ejercicios y meditaciones sistémicas que acompañan y profundizan el proceso grupal.",
       modalidad: "Modalidad: presencial",
-      extra: "Cupos muy limitados",
-      cta: "👉 Consultar próximos encuentros por WhatsApp",
+      extra: "",
+      cta: "Consultar próximos encuentros por WhatsApp",
     },
   ],
 } as const;
@@ -159,31 +160,60 @@ export const quienAcompana = {
  */
 export const reviews = [
   {
-    id: "maria-g",
-    name: "María G.",
-    date: "Enero 2026",
+    id: "1",
+    name: "Anónimo",
     rating: 5,
     message:
-      "Tiene una forma de ver las partes de una que uno mismo tenía ocultas. El acompañamiento no solo me ayudó a ordenar mi historia; cambió cómo me despierto cada día.",
-    subtitle: "Proceso C.R.E.A. · 4 encuentros",
+      "Constelé por primera vez de forma grupal y desde ese día comenzaron grandes cambios en mi vida. Venía atravesando un proceso de salud muy difícil y siempre pensaba lo peor. Dos días antes de una operación muy importante hice la constelación y pude aceptar lo que no quería ver. Hoy, en mi postquirúrgico, lloro de felicidad porque veo con claridad y siento que comenzó una nueva etapa en mi vida. Gracias por acompañarme en ese proceso.",
+    subtitle: "Constelación Grupal",
   },
   {
-    id: "laura-s",
-    name: "Laura S.",
-    date: "Diciembre 2025",
+    id: "2",
+    name: "Mabel",
     rating: 5,
     message:
-      "Las constelaciones en grupo reducido fueron un antes y un después. Por primera vez pude mirar mi sistema familiar con claridad y sin juicio.",
-    subtitle: "Constelaciones Familiares Exclusivas",
+      "Quiero agradecer lo vivido en el Encuentro de Sanación del Linaje Femenino. Fue una experiencia muy movilizante que me permitió cerrar un ciclo que venía trabajando hace mucho tiempo en terapia, lecturas y otros espacios. Encontré en el encuentro algo que me faltaba. Gracias por tu trabajo y dedicación.",
+    subtitle: "Encuentro de Sanación del Linaje Femenino",
   },
   {
-    id: "andrea-r",
-    name: "Andrea R.",
-    date: "Noviembre 2025",
+    id: "3",
+    name: "María Ángeles",
     rating: 5,
     message:
-      "Vine por un síntoma que se repetía y me encontré con un proceso que tocó el origen. Hoy siento que puedo elegir desde otro lugar.",
-    subtitle: "Encuentros individuales",
+      "Desde el primer encuentro del programa Creando Mi Nuevo Yo soy otra persona. Me siento profundamente feliz, sin un motivo específico, y noto cambios concretos en mi vida. Después de 26 años, volví a salir sola y disfrutar. Fue un antes y un después para mí.",
+    subtitle: "Programa Creando Mi Nuevo Yo",
+  },
+  {
+    id: "4",
+    name: "Anónimo",
+    rating: 5,
+    message:
+      "El encuentro Creando Mi Nuevo Yo fue una experiencia muy profunda. Me permitió conectar con recuerdos y emociones que estaban guardadas desde hace muchos años. Salí con una enorme sensación de paz y felicidad, y con la certeza de que estoy lista para afrontar lo que antes evitaba.",
+    subtitle: "Creando Mi Nuevo Yo",
+  },
+  {
+    id: "5",
+    name: "Sandra",
+    rating: 5,
+    message:
+      "En cada Constelación exclusiva encuentro paz, claridad y una evolución muy notoria en mi vida. Desde el primer encuentro hasta hoy el cambio es evidente. Estoy profundamente agradecida por el acompañamiento y por el trabajo realizado con tanto compromiso y corazón.",
+    subtitle: "Constelaciones Exclusivas",
+  },
+  {
+    id: "6",
+    name: "Rosana",
+    rating: 5,
+    message:
+      "El Programa Creando Mi Nuevo Yo fue una experiencia transformadora desde el primer momento. Incluso desde la lectura inicial ya comenzó a movilizarme profundamente. Me ayudó a ver mi historia desde otra perspectiva y a conectar con la vida de una manera más consciente y plena.",
+    subtitle: "Programa Creando Mi Nuevo Yo",
+  },
+  {
+    id: "7",
+    name: "José",
+    rating: 5,
+    message:
+      "Después de la constelación me siento muy bien, hacía mucho que no experimentaba esta sensación. Estoy agradecido por la conexión y por el acompañamiento brindado. Fue una experiencia muy significativa para mí.",
+    subtitle: "Constelaciones",
   },
 ] as const;
 

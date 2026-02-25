@@ -27,7 +27,7 @@ const formas = [
     description:
       "Grupos reducidos de hasta 4 personas. Un espacio cuidado, íntimo y consciente, donde cada participante constela dentro de un campo de resonancia que potencia los movimientos de sanación individuales y colectivos. Se integran constelaciones, ejercicios y meditaciones sistémicas para profundizar el proceso.",
     ubicacion: "Presencial",
-    extra: "Cupos muy limitados",
+    extra: "",
     cta: "Consultar próximos encuentros por WhatsApp",
   },
   {

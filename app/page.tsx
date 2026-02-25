@@ -178,13 +178,12 @@ export default function HomePage() {
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">Mi Camino</h2>
             <h3 className="heading-lg mb-8 leading-tight">Uniendo la intuición con un acompañamiento práctico.</h3>
             <div className="space-y-6 text-lg leading-relaxed text-[var(--color-text-muted)]">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Soy Jessica, facilitadora en Constelaciones Familiares, Terapeuta Akáshica y de Reprogramación Bioneuroemocional y Biológica, Maestra de Reiki y Médium.</p>
+              <p>Desde pequeña crecí en un entorno donde la metafísica y la mediumnidad formaban parte de mi vida. Con el tiempo comprendí que esas experiencias eran el impulso necesario para comenzar mi propio camino de transformación y aprendizaje.</p>
+              <p>Mi recorrido personal, incluyendo los momentos difíciles, me llevó a descubrir las Constelaciones Familiares y a integrar la conexión entre mente, alma y cuerpo como eje de mi trabajo.</p> 
+              <p>Hoy acompaño procesos desde un enfoque cercano y humano, combinando herramientas terapéuticas con la experiencia de haber transitado mis propios desafíos. Creo en el poder de tomar conciencia, accionar y abrirnos a un presente y futuro más pleno.</p>
             </div>
-            <a href={`#${sectionIds.metodoCrea}`} className="mt-10 inline-flex items-center gap-2 font-bold text-[var(--color-primary)] hover:underline">
-              Conocé el método
-              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-            </a>
+
           </div>
         </div>
       </section>
@@ -242,7 +241,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Método C.R.E.A.
+              Método C.R.E.A. · Un camino consciente hacia tu nueva versión
             </motion.p>
             <motion.h2
               className="heading-lg mb-6 text-[var(--color-primary-dark)]"
@@ -378,13 +377,13 @@ export default function HomePage() {
           >
             {formatosAcompanamiento.subtitle}
           </motion.p>
-          {/* Orden: 1) Sesiones C.R.E.A. | 2) Individuales | 3) Constelaciones | 4) Creando mi nuevo yo */}
+          {/* Orden: 1) Creando mi nuevo yo (destacado) | 2) Sesiones C.R.E.A. | 3) Individuales | 4) Constelaciones */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {[
+              formatosAcompanamiento.bloques[0],
               formatosAcompanamiento.bloques[2],
               formatosAcompanamiento.bloques[1],
               formatosAcompanamiento.bloques[3],
-              formatosAcompanamiento.bloques[0],
             ].map((bloque, i) => {
               const Icon =
                 iconByFormato[bloque.id as keyof typeof iconByFormato] ?? Heart;
@@ -402,7 +401,7 @@ export default function HomePage() {
                   className={cn(
                     "group relative flex flex-col rounded-3xl border bg-[var(--color-surface)] p-8 transition-all hover:shadow-2xl hover:shadow-[var(--color-primary)]/5",
                     colSpan,
-                    isProcesoCrea
+                    isIntensivo
                       ? "border-2 border-[var(--color-primary)]/40 shadow-xl shadow-[var(--color-primary)]/10"
                       : "border border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30"
                   )}
@@ -411,7 +410,7 @@ export default function HomePage() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  {isProcesoCrea && (
+                  {isIntensivo && (
                     <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 rounded-full bg-[var(--color-primary)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
                       Destacado
                     </div>
@@ -419,7 +418,7 @@ export default function HomePage() {
                   <div
                     className={cn(
                       "mb-6 flex size-14 shrink-0 items-center justify-center rounded-2xl transition-transform",
-                      isProcesoCrea
+                      isIntensivo
                         ? "bg-[var(--color-primary)] text-white group-hover:rotate-6"
                         : "bg-[var(--color-primary)]/10 text-[var(--color-primary)] group-hover:scale-110"
                     )}
@@ -463,7 +462,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className={cn(
                       "mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all",
-                      isProcesoCrea
+                      isIntensivo
                         ? "bg-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-primary)]/20 hover:shadow-xl"
                         : "border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
                     )}
@@ -477,7 +476,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. PRÓXIMOS ENCUENTROS (Upcoming Events - español, nombres de encuentros) */}
+      {/* 9. EXPERIENCIAS (slider solo de reviews) */}
+      <section id="experiencias" className="section-padding bg-[var(--color-surface)] scroll-mt-20">
+        <div className="container-inner">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">Experiencias</p>
+            <h2 className="heading-lg text-[var(--color-primary-dark)]">Lo que dicen quienes transitaron el proceso</h2>
+          </div>
+          <ReviewsSlider reviews={reviews} />
+        </div>
+      </section>
+
+      {/* 8. PRÓXIMOS ENCUENTROS + CONTACTO */}
       <section id="events" className="section-padding bg-[var(--color-surface-alt)] scroll-mt-20">
         <div className="container-inner">
           <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
@@ -487,40 +497,17 @@ export default function HomePage() {
             </div>
           </div>
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
-            <div className="rounded-[2rem] border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-8 shadow-xl lg:col-span-5">
-              <div className="mb-8 flex items-center justify-between">
-                <h4 className="font-serif text-xl font-bold text-[var(--color-primary-dark)]">Octubre 2025</h4>
-                <div className="flex gap-4">
-                  <button type="button" className="text-[var(--color-text-muted)]" aria-label="Mes anterior"><ArrowRight className="size-5 rotate-180" /></button>
-                  <button type="button" className="text-[var(--color-text-muted)]" aria-label="Mes siguiente"><ArrowRight className="size-5" /></button>
-                </div>
-              </div>
-              <div className="grid grid-cols-7 gap-y-4 text-center text-sm">
-                {["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"].map((d) => (
-                  <div key={d} className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">{d}</div>
-                ))}
-                {[...Array(35)].map((_, i) => {
-                  const dayNum = i < 1 ? 30 : i >= 31 ? i - 30 : i;
-                  const isEventDay = [12, 25].includes(dayNum) && i >= 1 && i < 31;
-                  return (
-                    <div key={i} className="flex items-center justify-center py-2">
-                      {isEventDay ? (
-                        <span className="flex size-8 items-center justify-center rounded-full bg-[var(--color-primary)] text-sm font-bold text-white">
-                          {dayNum}
-                        </span>
-                      ) : (
-                        <span className={cn(i < 1 || i >= 31 ? "text-[var(--color-text-muted)]/50" : "text-[var(--color-text)]")}>
-                          {dayNum}
-                        </span>
-                      )}
-                    </div>
-                  );
-                })}
+            {/* Formulario de contacto */}
+            <div className="rounded-[2rem] bg-[var(--color-primary)] p-8 shadow-xl lg:col-span-5 lg:sticky lg:top-24">
+              <h4 className="font-serif text-2xl font-bold text-white mb-2">¿Damos el primer paso?</h4>
+              <p className="mb-6 text-sm leading-relaxed text-white/85">Escribime por el formulario o por WhatsApp y coordinamos tu espacio.</p>
+              <div className="pt-6 border-t border-white/20 [&_label]:text-white [&_input]:border-white/30 [&_input]:bg-white/95 [&_textarea]:border-white/30 [&_textarea]:bg-white/95 [&_button]:bg-white [&_button]:text-[var(--color-primary)] [&_button]:hover:bg-white/90">
+                <ContactForm />
               </div>
             </div>
+            {/* Tarjetas de próximas fechas */}
             <div className="space-y-6 lg:col-span-7">
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
-                {/* Móvil: fecha y título en una fila; desktop: fecha a la izquierda */}
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
                     <span className="text-lg font-bold md:text-xl">12</span>
@@ -560,11 +547,11 @@ export default function HomePage() {
                     <span className="text-lg font-bold md:text-xl">Nov</span>
                     <span className="text-[10px] font-bold uppercase tracking-widest">2025</span>
                   </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando mi nuevo yo · Programa intensivo</h4>
+                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO · Programa intensivo</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando mi nuevo yo · Programa intensivo</h4>
-                  <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. Se ofrece dos veces al año. Consultá próximas fechas.</p>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO · Programa intensivo</h4>
+                  <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. 2 encuentros anuales. Consultá próximas fechas.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-1"><Clock className="size-4" /> Por confirmar</span>
                     <span className="flex items-center gap-1"><MapPin className="size-4" /> Presencial · Córdoba</span>
@@ -573,35 +560,6 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 9. CONTACTO + EXPERIENCIAS (mismo ancho que container-inner pero sin padding lateral) */}
-      <section id="contact-block" className="section-padding scroll-mt-20">
-        <div className="mx-auto max-w-5xl px-0 sm:px-0 lg:max-w-[80rem] xl:max-w-[90rem] lg:px-0">
-          <div className="overflow-visible rounded-[2rem] bg-[var(--color-surface)] shadow-2xl ">
-          <div className="flex flex-col lg:flex-row lg:justify-start">
-            {/* Columna izquierda: pegada al borde izquierdo del card */}
-            <div className="w-full shrink-0 bg-[var(--color-primary)] pt-8 pr-8 pb-8 pl-6 text-white lg:w-2/5 lg:min-w-[320px] lg:pt-10 lg:pr-10 lg:pb-10 lg:pl-8 lg:rounded-l-[2rem]">
-              <h3 className="font-serif text-2xl font-bold text-white mb-2 lg:text-3xl">¿Damos el primer paso?</h3>
-              <p className="mb-8 text-sm leading-relaxed text-white/85">Escribime por el formulario o por WhatsApp y coordinamos tu espacio.</p>
-              <div className="space-y-4 text-sm text-white/90">
-                <div className="flex items-center gap-3">
-                  <MapPin className="size-5 shrink-0 opacity-80" />
-                  <span>Presencial en Córdoba Capital · Online</span>
-                </div>
-              </div>
-              <div className="mt-8 pt-8 border-t border-white/20 [&_label]:text-white [&_input]:border-white/30 [&_input]:bg-white/95 [&_textarea]:border-white/30 [&_textarea]:bg-white/95 [&_button]:bg-white [&_button]:text-[var(--color-primary)] [&_button]:hover:bg-white/90">
-                <ContactForm />
-              </div>
-            </div>
-            {/* Columna derecha: reviews / experiencias (slider con datos de content.ts) */}
-            <div className="flex-none w-full p-8 lg:p-12 lg:pl-14 bg-[var(--color-surface)] lg:w-auto lg:min-w-0">
-              <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">Experiencias</h3>
-              <ReviewsSlider reviews={reviews} />
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
