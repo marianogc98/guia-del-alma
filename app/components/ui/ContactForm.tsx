@@ -12,32 +12,46 @@ export default function ContactForm() {
     submit();
   };
 
+  const inputClass =
+    "w-full rounded-lg border border-[var(--color-primary)]/20 bg-white px-3 py-2 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/60 focus:border-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20";
+  const labelClass = "mb-1 block text-xs font-medium text-[var(--color-text)]";
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label
-          htmlFor="nombre"
-          className="mb-2 block text-sm font-medium text-[var(--color-text)]"
-        >
-          Nombre *
-        </label>
-        <input
-          id="nombre"
-          type="text"
-          required
-          value={formData.nombre}
-          onChange={(e) => updateField("nombre", e.target.value)}
-          className="w-full rounded-lg border border-[var(--color-primary)]/20 bg-white px-4 py-3 text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/60 focus:border-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20"
-          placeholder="Tu nombre"
-          disabled={state.status === "loading"}
-        />
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label htmlFor="nombre" className={labelClass}>
+            Nombre *
+          </label>
+          <input
+            id="nombre"
+            type="text"
+            required
+            value={formData.nombre}
+            onChange={(e) => updateField("nombre", e.target.value)}
+            className={inputClass}
+            placeholder="Tu nombre"
+            disabled={state.status === "loading"}
+          />
+        </div>
+        <div>
+          <label htmlFor="telefono" className={labelClass}>
+            Teléfono <span className="opacity-60">(opcional)</span>
+          </label>
+          <input
+            id="telefono"
+            type="tel"
+            value={formData.telefono}
+            onChange={(e) => updateField("telefono", e.target.value)}
+            className={inputClass}
+            placeholder="+54 9 ..."
+            disabled={state.status === "loading"}
+          />
+        </div>
       </div>
 
       <div>
-        <label
-          htmlFor="email"
-          className="mb-2 block text-sm font-medium text-[var(--color-text)]"
-        >
+        <label htmlFor="email" className={labelClass}>
           Email *
         </label>
         <input
@@ -46,17 +60,14 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={(e) => updateField("email", e.target.value)}
-          className="w-full rounded-lg border border-[var(--color-primary)]/20 bg-white px-4 py-3 text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/60 focus:border-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20"
+          className={inputClass}
           placeholder="tu@email.com"
           disabled={state.status === "loading"}
         />
       </div>
 
       <div>
-        <label
-          htmlFor="asunto"
-          className="mb-2 block text-sm font-medium text-[var(--color-text)]"
-        >
+        <label htmlFor="asunto" className={labelClass}>
           Asunto
         </label>
         <input
@@ -64,26 +75,23 @@ export default function ContactForm() {
           type="text"
           value={formData.asunto}
           onChange={(e) => updateField("asunto", e.target.value)}
-          className="w-full rounded-lg border border-[var(--color-primary)]/20 bg-white px-4 py-3 text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/60 focus:border-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20"
+          className={inputClass}
           placeholder="Asunto del mensaje"
           disabled={state.status === "loading"}
         />
       </div>
 
       <div>
-        <label
-          htmlFor="mensaje"
-          className="mb-2 block text-sm font-medium text-[var(--color-text)]"
-        >
+        <label htmlFor="mensaje" className={labelClass}>
           Mensaje *
         </label>
         <textarea
           id="mensaje"
           required
-          rows={5}
+          rows={3}
           value={formData.mensaje}
           onChange={(e) => updateField("mensaje", e.target.value)}
-          className="w-full resize-y rounded-lg border border-[var(--color-primary)]/20 bg-white px-4 py-3 text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/60 focus:border-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20"
+          className={cn(inputClass, "resize-y")}
           placeholder="Escribe tu mensaje..."
           disabled={state.status === "loading"}
         />

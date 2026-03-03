@@ -126,7 +126,7 @@ export default function HomePage() {
               </div>
               <div className="absolute -bottom-4 -right-4 z-20 max-w-[200px] rounded-2xl border border-[var(--color-primary)]/10 bg-[var(--color-surface)] p-4 shadow-xl lg:-right-2">
               <p className="font-serif text-xs font-semibold text-[var(--color-primary-dark)]">
-                «Todo lo que llega es una oportunidad para mirarte, ordenarte y crear algo nuevo»
+                «Todo lo que llega abre una puerta para descubrirte y crear conscientemente una nueva versión de vos»
               </p>
             </div>
             </div>
@@ -377,7 +377,7 @@ export default function HomePage() {
           >
             {formatosAcompanamiento.subtitle}
           </motion.p>
-          {/* Orden: 1) Creando mi nuevo yo (destacado) | 2) Sesiones C.R.E.A. | 3) Individuales | 4) Constelaciones */}
+          {/* Orden: 1) Creando mi nuevo yo (destacado) | 2) Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos | 3) Individuales | 4) Constelaciones */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {[
               formatosAcompanamiento.bloques[0],
@@ -510,33 +510,33 @@ export default function HomePage() {
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">12</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Oct</span>
+                    <span className="text-lg font-bold md:text-xl">18</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">Mar</span>
                   </div>
                   <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Constelaciones Familiares Exclusivas</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
                   <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Constelaciones Familiares Exclusivas</h4>
-                  <p className="w-full text-sm text-[var(--color-text-muted)]">Grupos reducidos de hasta 4 personas. Un espacio íntimo y consciente para constelar y profundizar en el sistema familiar.</p>
+                  <p className="w-full text-sm text-[var(--color-text-muted)]">Grupos reducidos de hasta 4 o 5 personas. Un espacio íntimo y consciente para constelar y profundizar en el sistema familiar.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
-                    <span className="flex items-center gap-1"><Clock className="size-4" /> 10:00 - 14:00</span>
-                    <span className="flex items-center gap-1"><MapPin className="size-4" /> Presencial · Córdoba Capital</span>
+                    <span className="flex items-center gap-1"><Clock className="size-4" /> 18:00 - 20:00hs</span>
+                    <span className="flex items-center gap-1"><MapPin className="size-4" /> Presencial</span>
                   </div>
                 </div>
               </a>
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">25</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Oct</span>
+                    <span className="text-lg font-bold md:text-xl">10</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">Febrero</span>
                   </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Sesiones C.R.E.A. · Proceso de 4 encuentros</h4>
+                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Proceso profundo C.R.E.A. · Sesiones individuales de 4 encuentros consecutivos</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Sesiones C.R.E.A. · Proceso de 4 encuentros</h4>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Proceso profundo C.R.E.A. ·  Sesiones individuales de 4 encuentros consecutivos</h4>
                   <p className="w-full text-sm text-[var(--color-text-muted)]">Inicio de proceso personalizado con el Método C.R.E.A. Consultá disponibilidad para coordinar fechas y frecuencia.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
-                    <span className="flex items-center gap-1"><Clock className="size-4" /> A coordinar</span>
+                    <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
                     <span className="flex items-center gap-1"><MapPin className="size-4" /> Presencial u online</span>
                   </div>
                 </div>
@@ -544,17 +544,17 @@ export default function HomePage() {
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">Nov</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">2025</span>
+                    <span className="text-lg font-bold md:text-xl">Mayo</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">2026</span>
                   </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO · Programa intensivo</h4>
+                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO · Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO · Programa intensivo</h4>
-                  <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. 2 encuentros anuales. Consultá próximas fechas.</p>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO · Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
+                  <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. 3 encuentros anuales.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
-                    <span className="flex items-center gap-1"><Clock className="size-4" /> Por confirmar</span>
-                    <span className="flex items-center gap-1"><MapPin className="size-4" /> Presencial · Córdoba</span>
+                    <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
+                    <span className="flex items-center gap-1"><MapPin className="size-4" />Presencial u online</span>
                   </div>
                 </div>
               </a>

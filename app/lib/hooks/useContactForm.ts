@@ -5,6 +5,7 @@ import { useState, useCallback } from "react";
 export type ContactFormData = {
   nombre: string;
   email: string;
+  telefono: string;
   asunto: string;
   mensaje: string;
 };
@@ -17,6 +18,7 @@ export type ContactFormState = {
 const initialFormData: ContactFormData = {
   nombre: "",
   email: "",
+  telefono: "",
   asunto: "",
   mensaje: "",
 };

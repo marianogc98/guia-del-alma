@@ -73,17 +73,17 @@ export const queSePuedeTrabajar = {
 } as const;
 
 export const intensivo = {
-  title: "Creando Mi Nuevo YO · Programa intensivo",
+  title: "Creando Mi Nuevo YO · Programa Intensivo de Autoconocimiento y Transformación Personal",
   subtitle:
-    "Programa intensivo de creación consciente de un nuevo estado del ser",
+    "Programa Intensivo de Autoconocimiento y Transformación Personal de creación consciente de un nuevo estado del ser",
   descripcion:
     "Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. No es un espacio para «arreglar» lo que está mal: es un proceso para comprender desde dónde estás creando tu vida hoy y elegir conscientemente un nuevo estado interno. Cuando cambia el estado del ser, la realidad inevitablemente se transforma.",
   detalle:
-    "A lo largo de 3 encuentros semanales se recorre un proceso profundo y ordenado que permite reprogramar las tres dimensiones desde las cuales se crea la experiencia de vida: las memorias del alma (origen de la identidad actual), la mente (creencias que sostienen la percepción) y el cuerpo y la acción (donde se expresa o se limita el poder de elección). Integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL como experiencia consciente. No se trata de entender más; se trata de ser distinto.",
-  frecuencia: "2 encuentros anuales. Días sábados de 18 a 20Hs.",
+    "En 4 encuentros consecutivos, desarrollados a lo largo de un mes, se recorre un proceso profundo y ordenado que permite reprogramar las tres dimensiones desde las cuales se crea la experiencia de vida: las memorias del alma (origen de la identidad actual), la mente (creencias que sostienen la percepción) y el cuerpo y la acción (donde se expresa o se limita el poder de elección). Integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL como experiencia consciente. No se trata de entender más; se trata de ser distinto.",
+  frecuencia: "3 ediciones anuales. Días sábados de 18 a 20Hs.",
   modalidad: "Modalidad: Online. Incluye 1 encuentro virtual en vivo por semana + material de trabajo para imprimir",
   cta: "Consultar próximas fechas por WhatsApp",
-} as const ;
+} as const;
 
 export const formatosAcompanamiento = {
   title: "Formas de acompañamiento",
@@ -99,31 +99,32 @@ export const formatosAcompanamiento = {
     },
     {
       id: "individuales",
-      titulo: "Encuentros Individuales (1:1)",
+      titulo: "Sesiones Individuales (1:1)",
       descripcion:
-        "El encuentro individual es un espacio terapéutico íntimo, profundo y completamente personalizado, creado para acompañarte en un proceso uno a uno, donde tu historia, tu momento y tu necesidad son el centro.",
+        "Esta sesión individual es un espacio terapéutico íntimo, profundo y completamente personalizado, creado para acompañarte en un proceso uno a uno, donde tu historia, tu momento y tu necesidad son el centro.",
       detalle:
-        "Durante el encuentro exploramos qué se está expresando a través de un síntoma, emoción, conflicto vincular o situación repetitiva, para lograr una comprensión clara de su origen y de las dinámicas que hoy se manifiestan en tu presente. Luego realizamos el trabajo de integración, liberación y reprogramación consciente, buscando restablecer el orden interno y habilitar nuevas posibilidades.",
+        "Durante la sesión exploramos qué se está expresando a través de un síntoma, emoción, conflicto vincular o situación repetitiva, para lograr una comprensión clara de su origen y de las dinámicas que hoy se manifiestan en tu presente. Luego realizamos el trabajo de integración, liberación y reprogramación consciente, buscando restablecer el orden interno y habilitar nuevas posibilidades.",
       duracion: "Duración: 1 hora",
-      modalidad: "Modalidad: presencial en Córdoba Capital u online",
+      modalidad: "Modalidad: presencial u online",
       cta: "Me interesa",
     },
     {
       id: "proceso-crea",
-      titulo: "Sesiones C.R.E.A. · Proceso de 4 encuentros",
+      titulo: "Proceso profundo C.R.E.A. · Sesiones individuales de 4 encuentros consecutivos",
       descripcion:
-        "Un proceso de acompañamiento consciente conformado por cuatro encuentros terapéuticos, diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.",
+        "Un proceso de acompañamiento consciente diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.",
       detalle:
-        "Cada sesión tiene una duración de 1 hora y el recorrido se desarrolla de forma personalizada, respetando la historia, el momento vital y el ritmo de cada persona. A lo largo del proceso se integran, según lo que cada etapa requiera: Constelaciones Familiares y Sistémicas, Biodecodificación y Reprogramación Bioneuroemocional, Lectura Akáshica aplicada al proceso terapéutico, Ejercicios y meditaciones de integración, Análisis del árbol generacional y memorias emocionales. Los días y la frecuencia de los encuentros se acuerdan previamente, favoreciendo un seguimiento continuo, consciente y respetuoso.",
+        "Se trata de un ciclo de 4 sesiones consecutivas a lo largo de un mes, con encuentros de 1 hora cada uno y un abordaje completamente personalizado, respetando la historia, el momento vital y el ritmo de cada persona. A lo largo del proceso se integran, según lo que cada etapa requiera: Constelaciones Familiares y Sistémicas, Biodecodificación y Reprogramación Bioneuroemocional, Lectura Akáshica aplicada al proceso terapéutico, Ejercicios y meditaciones de integración, Análisis del árbol generacional y memorias emocionales. Los días y la frecuencia de los encuentros se acuerdan previamente, favoreciendo un seguimiento continuo, consciente y respetuoso.",
       nota:
         "Este proceso no busca abordar síntomas de manera aislada, sino comprender, liberar y reordenar las memorias emocionales, mentales, biológicas y álmicas que hoy se expresan como conflicto o malestar, habilitando un nuevo estado de coherencia interna.",
+      modalidad: "Modalidad: presencial u online",
       cta: "Me interesa",
     },
     {
       id: "constelaciones",
       titulo: "Constelaciones Familiares Exclusivas · Grupos reducidos",
       descripcion:
-        "Un espacio diseñado para quienes desean un trabajo profundo, íntimo y consciente, en grupos reducidos de hasta 4 personas, favoreciendo la privacidad, la contención y un acompañamiento personalizado.",
+        "Un espacio diseñado para quienes desean un trabajo profundo, íntimo y consciente, en grupos reducidos de hasta 4 o 5 personas, favoreciendo la privacidad, la contención y un acompañamiento personalizado.",
       detalle:
         "Todos los participantes constelan. Al desarrollarse dentro de un campo de resonancia sistémica, el grupo se conecta de manera precisa a través de las historias personales y del sistema familiar, potenciando los movimientos de conciencia y sanación individuales y colectivos. Se integran ejercicios y meditaciones sistémicas que acompañan y profundizan el proceso grupal.",
       modalidad: "Modalidad: presencial",
@@ -133,17 +134,7 @@ export const formatosAcompanamiento = {
   ],
 } as const;
 
-export const procesoCreaFoco = {
-  title: "Proceso C.R.E.A. · 4 encuentros",
-  subtitle: "El servicio más profundo",
-  intro:
-    "Un proceso de acompañamiento consciente conformado por cuatro encuentros terapéuticos, diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.",
-  desarrollo:
-    "Cada sesión tiene una duración de 1 hora y el recorrido se desarrolla de forma personalizada, respetando la historia, el momento vital y el ritmo de cada persona. A lo largo del proceso se integran, según lo que cada etapa requiera: Constelaciones Familiares y Sistémicas, Biodecodificación y Reprogramación Bioneuroemocional, Lectura Akáshica aplicada al proceso terapéutico, Ejercicios y meditaciones de integración, Análisis del árbol generacional y memorias emocionales. Los días y la frecuencia de los encuentros se acuerdan previamente, favoreciendo un seguimiento continuo, consciente y respetuoso.",
-  paraQuien:
-    "Este proceso no busca abordar síntomas de manera aislada, sino comprender, liberar y reordenar las memorias emocionales, mentales, biológicas y álmicas que hoy se expresan como conflicto o malestar, habilitando un nuevo estado de coherencia interna.",
-  cta: "Me interesa",
-} as const;
+
 
 export const quienAcompana = {
   title: "Una agenda consciente",

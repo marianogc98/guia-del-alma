@@ -71,9 +71,9 @@ Todo aquello que hoy se expresa como síntoma, conflicto o repetición puede ser
 
 ## 6. FORMAS DE ACOMPAÑAMIENTO
 
-### Creando Mi Nuevo Yo · Programa intensivo (dos veces al año)
+### Creando Mi Nuevo Yo · Programa Intensivo de Autoconocimiento y Transformación Personal (dos veces al año)
 
-Programa intensivo de creación consciente de un nuevo estado del ser. Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. Tres encuentros semanales; integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL. Se ofrece dos veces al año.
+Programa Intensivo de Autoconocimiento y Transformación Personal de creación consciente de un nuevo estado del ser. Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. Tres encuentros semanales; integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL. Se ofrece dos veces al año.
 
 **CTA:** 👉 Consultar próximas fechas por WhatsApp
 
@@ -92,7 +92,7 @@ Durante el encuentro exploramos qué se está expresando a través de un síntom
 
 ---
 
-### Sesiones C.R.E.A. · Proceso de 4 encuentros
+### Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos · Proceso de 4 encuentros
 
 Un proceso de acompañamiento consciente conformado por cuatro encuentros terapéuticos, diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.
 
@@ -119,7 +119,7 @@ Todos los participantes constelan. Al desarrollarse dentro de un campo de resona
 
 ## 7. PROCESO C.R.E.A. (Foco comercial)
 
-*Mismo contenido desarrollado que el bloque “Sesiones C.R.E.A. · Proceso de 4 encuentros” en la sección 6, para profundizar en el servicio más fuerte.*
+*Mismo contenido desarrollado que el bloque “Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos · Proceso de 4 encuentros” en la sección 6, para profundizar en el servicio más fuerte.*
 
 ---
 

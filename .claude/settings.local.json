@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add app/components/ui/ReviewsSlider.tsx app/lib/data/content.ts app/page.tsx app/servicios/page.tsx public/Hero.jpg)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
