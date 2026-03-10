@@ -160,7 +160,7 @@ export default function HomePage() {
             </div>
             <div className="space-y-4 pt-12">
               <div className="flex h-48 flex-col items-center justify-center rounded-2xl bg-[var(--color-primary)]/10 p-6 text-center">
-                <span className="text-3xl font-bold text-[var(--color-primary)]">10+</span>
+                <span className="text-3xl font-bold text-[var(--color-primary)]">+10</span>
                 <p className="text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]">Años de experiencia</p>
               </div>
               <div className="relative h-64 overflow-hidden rounded-2xl shadow-lg">
@@ -241,7 +241,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Método C.R.E.A. · Un camino consciente hacia tu nueva versión
+              Método C.R.E.A. - Un camino consciente hacia tu nueva versión
             </motion.p>
             <motion.h2
               className="heading-lg mb-6 text-[var(--color-primary-dark)]"
@@ -377,7 +377,7 @@ export default function HomePage() {
           >
             {formatosAcompanamiento.subtitle}
           </motion.p>
-          {/* Orden: 1) Creando mi nuevo yo (destacado) | 2) Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos | 3) Individuales | 4) Constelaciones */}
+          {/* Orden: 1) Creando mi nuevo yo (destacado) - 2) Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos - 3) Individuales - 4) Constelaciones */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {[
               formatosAcompanamiento.bloques[0],
@@ -510,8 +510,8 @@ export default function HomePage() {
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">18</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Mar</span>
+                    <span className="text-lg font-bold md:text-xl"></span>
+                    <span className="text-[8px] font-bold uppercase tracking-widest">Miércoles</span>
                   </div>
                   <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Constelaciones Familiares Exclusivas</h4>
                 </div>
@@ -527,13 +527,13 @@ export default function HomePage() {
               <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">10</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Febrero</span>
+                    <span className="text-lg font-bold md:text-xl"></span>
+                    <span className="text-[8px] font-bold uppercase tracking-widest">A acordar</span>
                   </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Proceso profundo C.R.E.A. · Sesiones individuales de 4 encuentros consecutivos</h4>
+                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Proceso profundo C.R.E.A. - Sesiones individuales de 4 encuentros consecutivos</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Proceso profundo C.R.E.A. ·  Sesiones individuales de 4 encuentros consecutivos</h4>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Proceso profundo C.R.E.A. -  Sesiones individuales de 4 encuentros consecutivos</h4>
                   <p className="w-full text-sm text-[var(--color-text-muted)]">Inicio de proceso personalizado con el Método C.R.E.A. Consultá disponibilidad para coordinar fechas y frecuencia.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
@@ -547,10 +547,10 @@ export default function HomePage() {
                     <span className="text-lg font-bold md:text-xl">Mayo</span>
                     <span className="text-[10px] font-bold uppercase tracking-widest">2026</span>
                   </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO · Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
+                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO - Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO · Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO - Programa Intensivo de Autoconocimiento y Transformación Personal</h4>
                   <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. 3 encuentros anuales.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>

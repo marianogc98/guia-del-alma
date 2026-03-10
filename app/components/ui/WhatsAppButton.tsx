@@ -10,7 +10,7 @@ import {
 import { cn } from "@/app/lib/utils/cn";
 
 type Props = {
-  variant?: "primary" | "secondary" | "footer";
+  variant?: "primary" - "secondary" - "footer";
   className?: string;
   label?: string;
   /** Usar mensaje prearmado (recomendado para CTAs principales) */

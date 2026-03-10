@@ -4,7 +4,7 @@
  * Se usa para construir el enlace wa.me
  */
 const whatsappNumber =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5493510000000";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+5493516130347";
 
 export const WHATSAPP_URL = `https://wa.me/${whatsappNumber}`;
 

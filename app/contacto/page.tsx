@@ -67,7 +67,7 @@ export default function ContactoPage() {
                       <p className="text-sm font-medium text-[var(--color-text)]">
                         Ubicación
                       </p>
-                      <span>Presencial en Córdoba Capital · Online</span>
+                      <span>Presencial en Córdoba Capital - Online</span>
                     </div>
                   </li>
                 </ul>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { sectionIds } from "@/app/lib/data/content";
 
@@ -13,16 +14,18 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-[var(--color-primary)]/10 bg-[var(--color-primary-dark)] text-white">
-      <div className="container-inner section-padding">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container-inner py-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <h3 className="mb-4 font-serif text-xl font-semibold">
-              Guía del Alma
-            </h3>
-            <p className="text-sm text-white/80">
-            Método C.R.E.A., Constelaciones Familiares,
-             Reprogramación Bioneuroemocional y Biológica, Sanación Akáshica
-            </p>
+            <div className="mb-2">
+              <Image
+                src="/logoFooter.png"
+                alt="Jessica Frutos - Guía del Alma"
+                width={144}
+                height={144}
+                className="h-36 w-auto brightness-0 invert"
+              />
+            </div>
           </div>
 
           <div>
@@ -49,14 +52,28 @@ export default function Footer() {
             </h4>
             <p className="flex items-start gap-2 text-sm text-white/80">
               <MapPin size={16} className="mt-0.5 shrink-0" />
-              Presencial en Córdoba Capital · Online
+              Presencial en Córdoba Capital - Online
+            </p>
+            <p className="mt-4 text-sm text-white/80">
+              Método C.R.E.A., Constelaciones Familiares,
+              Reprogramación Bioneuroemocional y Biológica, Sanación Akáshica
             </p>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/20 pt-8 text-center text-sm text-white/60">
-          © {new Date().getFullYear()} Jessica Frutos | Guía del Alma. Todos los derechos
-          reservados.
+        <div className="mt-6 border-t border-white/20 pt-5 text-center text-sm text-white/60">
+          <p>© {new Date().getFullYear()} Jessica Frutos - Guía del Alma. Todos los derechos reservados.</p>
+          <p className="mt-1">
+            Desarrollo y diseño por{" "}
+            <a
+              href="https://kudev.com.ar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-white/80 transition-colors"
+            >
+              kudev.com.ar
+            </a>
+          </p>
         </div>
       </div>
     </footer>

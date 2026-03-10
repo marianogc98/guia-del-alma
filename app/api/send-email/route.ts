@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-const TO_EMAIL = process.env.RESEND_TO_EMAIL || "contacto@guiadelalma.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "jessicafrutosvidaplena@gmail.com";
 
 function validateBody(body: unknown): {
   nombre: string;
@@ -60,9 +58,11 @@ export async function POST(request: NextRequest) {
 
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
+
     const { error } = await resend.emails.send({
-      from: FROM_EMAIL,
+      from: "Guía del Alma <contacto@jessicafrutosguiadelalma.com>",
       to: TO_EMAIL,
+      replyTo: data.email,
       subject: `[Guía del Alma] ${data.asunto} - ${data.nombre}`,
       html: `
         <p><strong>Nombre:</strong> ${data.nombre}</p>

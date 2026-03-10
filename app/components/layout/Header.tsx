@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/app/lib/utils/cn";
@@ -21,11 +22,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-primary)]/10 bg-[var(--background)]/95 backdrop-blur-sm">
       <div className="container-inner flex h-16 items-center justify-between md:h-20">
-        <Link
-          href="/"
-          className="font-serif text-xl font-semibold text-[var(--color-primary-dark)] transition-colors hover:text-[var(--color-primary)] md:text-2xl"
-        >
-          Jessica Frutos Guía del Alma
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logoHeader.png"
+            alt="Jessica Frutos - Guía del Alma"
+            width={180}
+            height={54}
+            className="h-10 w-auto md:h-12"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -34,7 +39,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "rounded-lg px-4 py-2 text-sm font-medium text-[var(--color-text)] transition-colors hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
+                "rounded-lg px-4 py-2 text-sm font-medium text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
               )}
             >
               {link.label}
@@ -67,7 +72,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "rounded-lg px-4 py-3 font-medium text-[var(--color-text)] transition-colors hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
+                    "rounded-lg px-4 py-3 font-medium text-[var(--color-primary-dark)] transition-colors hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
                   )}
                   onClick={() => setMobileOpen(false)}
                 >

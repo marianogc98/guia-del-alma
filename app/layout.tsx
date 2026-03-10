@@ -20,7 +20,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Guía del Alma | Acompañamiento consciente · Método C.R.E.A.",
+  title: "Guía del Alma - Acompañamiento consciente - Método C.R.E.A.",
   description:
     "Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades. Método C.R.E.A., constelaciones familiares y sanación emocional. Presencial en Córdoba y online.",
   keywords: [
@@ -31,8 +31,11 @@ export const metadata: Metadata = {
     "Córdoba",
     "guía del alma",
   ],
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
-    title: "Guía del Alma | Acompañamiento consciente · Método C.R.E.A.",
+    title: "Guía del Alma - Acompañamiento consciente - Método C.R.E.A.",
     description:
       "Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades. Presencial en Córdoba y online.",
     type: "website",
