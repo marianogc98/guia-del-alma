@@ -1,4 +1,4 @@
-# Acompañamiento consciente · Método C.R.E.A.
+# Acompañamiento consciente - Método C.R.E.A.
 
 > Contenido de la landing. La web usa estos textos desde `app/lib/data/content.ts`.
 > Estructura según `estructura.md`: una sola historia, una sola acción (WhatsApp).
@@ -9,7 +9,7 @@
 
 **Headline:** Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades
 
-**Subheadline:** Método C.R.E.A. · Constelaciones Familiares · Sanación emocional
+**Subheadline:** Método C.R.E.A. - Constelaciones Familiares - Sanación emocional
 
 **Subheadline 2:** Sesiones individuales, procesos personalizados y constelaciones en grupos reducidos
 
@@ -71,9 +71,9 @@ Todo aquello que hoy se expresa como síntoma, conflicto o repetición puede ser
 
 ## 6. FORMAS DE ACOMPAÑAMIENTO
 
-### Creando Mi Nuevo Yo · Programa Intensivo de Autoconocimiento y Transformación Personal (dos veces al año)
+### Creando Mi Nuevo Yo - Programa Intensivo de Sanación y Transformación Personal (dos veces al año)
 
-Programa Intensivo de Autoconocimiento y Transformación Personal de creación consciente de un nuevo estado del ser. Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. Tres encuentros semanales; integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL. Se ofrece dos veces al año.
+Programa Intensivo de Sanación y Transformación Personal de creación consciente de un nuevo estado del ser. Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. Tres encuentros semanales; integra Constelaciones Familiares, Física Cuántica, Reprogramación Bioneuroemocional y PNL. Se ofrece dos veces al año.
 
 **CTA:** 👉 Consultar próximas fechas por WhatsApp
 
@@ -92,7 +92,7 @@ Durante el encuentro exploramos qué se está expresando a través de un síntom
 
 ---
 
-### Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos · Proceso de 4 encuentros
+### Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos - Proceso de 4 encuentros
 
 Un proceso de acompañamiento consciente conformado por cuatro encuentros terapéuticos, diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.
 
@@ -104,7 +104,7 @@ Este proceso no busca abordar síntomas de manera aislada, sino comprender, libe
 
 ---
 
-### Constelaciones Familiares Exclusivas · Grupos reducidos
+### Constelaciones Familiares Exclusivas - Grupos reducidos
 
 Un espacio diseñado para quienes desean un trabajo profundo, íntimo y consciente, en grupos reducidos de hasta 4 personas, favoreciendo la privacidad, la contención y un acompañamiento personalizado.
 
@@ -119,7 +119,7 @@ Todos los participantes constelan. Al desarrollarse dentro de un campo de resona
 
 ## 7. PROCESO C.R.E.A. (Foco comercial)
 
-*Mismo contenido desarrollado que el bloque “Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos · Proceso de 4 encuentros” en la sección 6, para profundizar en el servicio más fuerte.*
+*Mismo contenido desarrollado que el bloque “Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos - Proceso de 4 encuentros” en la sección 6, para profundizar en el servicio más fuerte.*
 
 ---
 
@@ -145,11 +145,11 @@ Si sentís que este proceso es para vos, escribime y vemos juntos cuál es el es
 
 Testimonios que se muestran en la sección Contacto + Experiencias (slider en desktop, lista en móvil).
 
-| Autor   | Subtítulo                          | Mensaje |
+| Autor   - Subtítulo                          - Mensaje |
 |--------|-------------------------------------|--------|
-| María G. | Proceso C.R.E.A. · 4 encuentros    | Tiene una forma de ver las partes de una que uno mismo tenía ocultas. El acompañamiento no solo me ayudó a ordenar mi historia; cambió cómo me despierto cada día. |
-| Laura S. | Constelaciones Familiares Exclusivas | Las constelaciones en grupo reducido fueron un antes y un después. Por primera vez pude mirar mi sistema familiar con claridad y sin juicio. |
-| Andrea R. | Encuentros individuales           | Vine por un síntoma que se repetía y me encontré con un proceso que tocó el origen. Hoy siento que puedo elegir desde otro lugar. |
+| María G. - Proceso C.R.E.A. - 4 encuentros    - Tiene una forma de ver las partes de una que uno mismo tenía ocultas. El acompañamiento no solo me ayudó a ordenar mi historia; cambió cómo me despierto cada día. |
+| Laura S. - Constelaciones Familiares Exclusivas - Las constelaciones en grupo reducido fueron un antes y un después. Por primera vez pude mirar mi sistema familiar con claridad y sin juicio. |
+| Andrea R. - Encuentros individuales           - Vine por un síntoma que se repetía y me encontré con un proceso que tocó el origen. Hoy siento que puedo elegir desde otro lugar. |
 
 Los datos se editan en `app/lib/data/content.ts` (export `reviews`).
 

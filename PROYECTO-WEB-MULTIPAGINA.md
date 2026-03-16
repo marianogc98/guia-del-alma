@@ -6,16 +6,16 @@ Este documento describe cómo crear **otra web** usando el mismo stack tecnológ
 
 ## 1. Stack tecnológico (igual que este proyecto)
 
-| Tecnología | Versión | Uso |
+| Tecnología - Versión - Uso |
 |------------|---------|-----|
-| **Next.js** | 16.x | App Router, API Routes, SSR/SSG |
-| **React** | 19.x | UI |
-| **TypeScript** | 5.x | Tipado |
-| **Tailwind CSS** | 4.x | Estilos (PostCSS) |
-| **Framer Motion** | 12.x | Animaciones |
-| **Lucide React** | última | Iconos |
-| **clsx** + **tailwind-merge** | - | Utilidad `cn()` para clases condicionales |
-| **Resend** | 6.x | Envío de emails (formulario de contacto) |
+| **Next.js** - 16.x - App Router, API Routes, SSR/SSG |
+| **React** - 19.x - UI |
+| **TypeScript** - 5.x - Tipado |
+| **Tailwind CSS** - 4.x - Estilos (PostCSS) |
+| **Framer Motion** - 12.x - Animaciones |
+| **Lucide React** - última - Iconos |
+| **clsx** + **tailwind-merge** - - - Utilidad `cn()` para clases condicionales |
+| **Resend** - 6.x - Envío de emails (formulario de contacto) |
 
 ### Comandos iniciales en el nuevo proyecto
 

@@ -67,7 +67,7 @@ Ejemplo (inglés):
 }
 ```
 
-En el código, cada ítem del carousel lleva un campo extra `platform: 'airbnb' | 'google'` para mostrar logo y estilos.
+En el código, cada ítem del carousel lleva un campo extra `platform: 'airbnb' - 'google'` para mostrar logo y estilos.
 
 ---
 
@@ -140,7 +140,7 @@ Si no usas Card, un `div` con clases equivalentes (border, rounded, padding, sha
 Las fechas vienen como texto `"Month YYYY"` (inglés o español). Para ordenar:
 
 1. Parsear a `Date`: mapa de nombres de mes → número (0–11), split por espacio, construir `new Date(year, month, 1)`.
-2. Unir todas las reseñas en un solo array y añadir `platform: 'airbnb' | 'google'`.
+2. Unir todas las reseñas en un solo array y añadir `platform: 'airbnb' - 'google'`.
 3. Ordenar por fecha descendente: `dateB.getTime() - dateA.getTime()`.
 
 Ejemplo de `parseDate` (soporta inglés y español):
@@ -230,12 +230,12 @@ Luego en el componente usas `reviewsData.airbnb`, `reviewsData.google` y la mism
 
 ## 8. Resumen de archivos en este proyecto
 
-| Qué | Dónde |
+| Qué - Dónde |
 |-----|--------|
-| Traducciones / datos reviews | `messages/en.json`, `messages/es.json` → clave `reviews` |
-| Componente Reviews | `components/reviews.tsx` |
-| Carousel (Embla + shadcn) | `components/ui/carousel.tsx` |
-| Card | `components/ui/card.tsx` |
-| Iconos | `lucide-react` (Star, Quote), `react-icons/fa` (FaAirbnb), `react-icons/si` (SiGoogle) |
+| Traducciones / datos reviews - `messages/en.json`, `messages/es.json` → clave `reviews` |
+| Componente Reviews - `components/reviews.tsx` |
+| Carousel (Embla + shadcn) - `components/ui/carousel.tsx` |
+| Card - `components/ui/card.tsx` |
+| Iconos - `lucide-react` (Star, Quote), `react-icons/fa` (FaAirbnb), `react-icons/si` (SiGoogle) |
 
 Con esta estructura y la misma lógica de datos + ordenación + responsive puedes replicar el bloque de reviews en otra web usando React/Next y, si quieres, solo datos estáticos sin i18n.

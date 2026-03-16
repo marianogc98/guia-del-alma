@@ -73,9 +73,9 @@ export const queSePuedeTrabajar = {
 } as const;
 
 export const intensivo = {
-  title: "Creando Mi Nuevo YO - Programa Intensivo de Autoconocimiento y Transformación Personal",
+  title: "Creando Mi Nuevo YO - Programa Intensivo de Sanación y Transformación Personal",
   subtitle:
-    "Programa Intensivo de Autoconocimiento y Transformación Personal de creación consciente de un nuevo estado del ser",
+    "Programa Intensivo de Sanación y Transformación Personal de creación consciente de un nuevo estado del ser",
   descripcion:
     "Pensado para quienes sienten que ya no pueden —ni quieren— seguir siendo la misma versión de sí mismas. No es un espacio para «arreglar» lo que está mal: es un proceso para comprender desde dónde estás creando tu vida hoy y elegir conscientemente un nuevo estado interno. Cuando cambia el estado del ser, la realidad inevitablemente se transforma.",
   detalle:

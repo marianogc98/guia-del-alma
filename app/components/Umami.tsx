@@ -35,11 +35,8 @@ export default function Umami() {
 
   return (
     <Script
-      src={
-        process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL ||
-        "https://umami.example.com/script.js"
-      }
-      data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ""}
+      src="https://umami.kudev.cloud/script.js"
+      data-website-id="ca6c8ee7-28c6-4150-8c08-abbbea281ab7"
       strategy="afterInteractive"
       onLoad={handleLoad}
     />
