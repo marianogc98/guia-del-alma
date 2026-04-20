@@ -531,7 +531,7 @@ export default function HomePage() {
                   <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Proceso profundo C.R.E.A. - Sesiones individuales de 4 encuentros consecutivos</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Sesiones individuales de 4 encuentros consecutivos - "Proceso profundo C.R.E.A."</h4>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Sesiones individuales de 4 encuentros consecutivos - &ldquo;Proceso profundo C.R.E.A.&rdquo;</h4>
                   <p className="w-full text-sm text-[var(--color-text-muted)]">Inicio de proceso personalizado con el Método C.R.E.A. Consultá disponibilidad para coordinar fechas y frecuencia.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
