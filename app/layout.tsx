@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import "./globals.css";
 import Umami from "./components/Umami";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import MetaPixel from "./components/MetaPixel";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import WhatsAppFloating from "./components/ui/WhatsAppFloating";
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <Umami />
         <GoogleAnalytics />
+        <MetaPixel />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

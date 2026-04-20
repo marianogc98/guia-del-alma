@@ -5,9 +5,9 @@
 
 export const hero = {
   headline:
-    "Acompañamiento consciente para sanar vínculos, liberar bloqueos y crear nuevas posibilidades",
+    "Acompañamiento para transformar tus vínculos y crear la vida que elegís",
   subheadline:
-    "Método C.R.E.A. - Constelaciones Familiares - Reprogramación Bioneuroemocional y Biológica - Sanación Akáshica",
+    "A través de constelaciones familiares, reprogramación bioneuroemocional y sanación akáshica, liberás memorias y creencias que hoy condicionan tu presente.",
   cta: "Coordinemos tu encuentro",
 } as const;
 
@@ -110,7 +110,7 @@ export const formatosAcompanamiento = {
     },
     {
       id: "proceso-crea",
-      titulo: "Proceso profundo C.R.E.A. - Sesiones individuales de 4 encuentros consecutivos",
+      titulo: 'Sesiones individuales de 4 encuentros consecutivos - "Proceso profundo C.R.E.A." ',
       descripcion:
         "Un proceso de acompañamiento consciente diseñado para profundizar en el autoconocimiento, la sanación emocional y la transformación personal desde una mirada integral a través del Método C.R.E.A.",
       detalle:
@@ -122,7 +122,7 @@ export const formatosAcompanamiento = {
     },
     {
       id: "constelaciones",
-      titulo: "Constelaciones Familiares Exclusivas - Grupos reducidos",
+      titulo: "Constelaciones Familiares Exclusivas - (Grupos reducidos)",
       descripcion:
         "Un espacio diseñado para quienes desean un trabajo profundo, íntimo y consciente, en grupos reducidos de hasta 4 o 5 personas, favoreciendo la privacidad, la contención y un acompañamiento personalizado.",
       detalle:

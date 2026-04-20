@@ -126,7 +126,7 @@ export default function HomePage() {
               </div>
               <div className="absolute -bottom-4 -right-4 z-20 max-w-[200px] rounded-2xl border border-[var(--color-primary)]/10 bg-[var(--color-surface)] p-4 shadow-xl lg:-right-2">
               <p className="font-serif text-xs font-semibold text-[var(--color-primary-dark)]">
-                «Todo lo que llega abre una puerta para descubrirte y crear conscientemente una nueva versión de vos»
+                «Cada encuentro es un espacio de apertura y transformación, donde trabajamos desde una mirada integral del ser (mente, cuerpo y alma)»
               </p>
             </div>
             </div>
@@ -225,6 +225,125 @@ export default function HomePage() {
           >
             {tePasaQue.cierre}
           </motion.p>
+        </div>
+      </section>
+
+      {/* 5. FORMATOS DE ACOMPAÑAMIENTO (encuentros, bloques horizontales) */}
+      <section
+        id={sectionIds.servicios}
+        className="section-padding bg-[var(--color-surface-alt)] scroll-mt-20"
+      >
+        <div className="container-inner">
+          <motion.h2
+            className="heading-lg mb-4 text-center text-[var(--color-primary-dark)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {formatosAcompanamiento.title}
+          </motion.h2>
+          <motion.p
+            className="mx-auto mb-10 max-w-2xl text-center text-[var(--color-text-muted)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {formatosAcompanamiento.subtitle}
+          </motion.p>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {[
+              formatosAcompanamiento.bloques[1],
+              formatosAcompanamiento.bloques[3],
+              formatosAcompanamiento.bloques[2],
+            ].map((bloque, i) => {
+              const Icon =
+                iconByFormato[bloque.id as keyof typeof iconByFormato] ?? Heart;
+              const isProcesoCrea = bloque.id === "proceso-crea";
+              const isIntensivo = bloque.id === "intensivo";
+              const colSpan =
+                isIntensivo || isProcesoCrea ? "lg:col-span-2" : "";
+              const whatsappHref =
+                bloque.id === "intensivo"
+                  ? WHATSAPP_URL_ENCUENTROS
+                  : WHATSAPP_URL_WITH_MESSAGE;
+              return (
+                <motion.article
+                  key={bloque.id}
+                  className={cn(
+                    "group relative flex flex-col rounded-3xl border bg-[var(--color-surface)] p-8 transition-all hover:shadow-2xl hover:shadow-[var(--color-primary)]/5",
+                    colSpan,
+                    isIntensivo
+                      ? "border-2 border-[var(--color-primary)]/40 shadow-xl shadow-[var(--color-primary)]/10"
+                      : "border border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30"
+                  )}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  {isIntensivo && (
+                    <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 rounded-full bg-[var(--color-primary)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
+                      Destacado
+                    </div>
+                  )}
+                  <div
+                    className={cn(
+                      "mb-6 flex size-14 shrink-0 items-center justify-center rounded-2xl transition-transform",
+                      isIntensivo
+                        ? "bg-[var(--color-primary)] text-white group-hover:rotate-6"
+                        : "bg-[var(--color-primary)]/10 text-[var(--color-primary)] group-hover:scale-110"
+                    )}
+                  >
+                    <Icon className="size-7" />
+                  </div>
+                  <h3 className="heading-md mb-3 text-[var(--color-primary-dark)]">
+                    {bloque.titulo}
+                  </h3>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                    {bloque.descripcion}
+                  </p>
+                  {"detalle" in bloque && bloque.detalle && (
+                    <p className="mb-4 text-sm text-[var(--color-text-muted)]">
+                      {bloque.detalle}
+                    </p>
+                  )}
+                  {"nota" in bloque && bloque.nota && (
+                    <p className="mb-4 text-sm font-serif text-[var(--color-text-muted)]">
+                      {bloque.nota}
+                    </p>
+                  )}
+                  {"duracion" in bloque && bloque.duracion && (
+                    <p className="mb-1 text-xs font-medium text-[var(--color-primary)]">
+                      {bloque.duracion}
+                    </p>
+                  )}
+                  {"modalidad" in bloque && bloque.modalidad && (
+                    <p className="mb-2 text-xs text-[var(--color-text-muted)]">
+                      {bloque.modalidad}
+                    </p>
+                  )}
+                  {"extra" in bloque && bloque.extra && (
+                    <p className="mb-4 text-xs font-semibold text-[var(--color-primary)]">
+                      {bloque.extra}
+                    </p>
+                  )}
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all",
+                      isIntensivo
+                        ? "bg-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-primary)]/20 hover:shadow-xl"
+                        : "border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                    )}
+                  >
+                    {bloque.cta}
+                  </a>
+                </motion.article>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -355,127 +474,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. FORMATOS DE ACOMPAÑAMIENTO (encuentros, bloques horizontales) */}
-      <section
-        id={sectionIds.servicios}
-        className="section-padding bg-[var(--color-surface-alt)] scroll-mt-20"
-      >
-        <div className="container-inner">
-          <motion.h2
-            className="heading-lg mb-4 text-center text-[var(--color-primary-dark)]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {formatosAcompanamiento.title}
-          </motion.h2>
-          <motion.p
-            className="mx-auto mb-10 max-w-2xl text-center text-[var(--color-text-muted)]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {formatosAcompanamiento.subtitle}
-          </motion.p>
-          {/* Orden: 1) Creando mi nuevo yo (destacado) - 2) Proceso profundo C.R.E.A. Sesiones individuales de 4 encuentros consecutivos - 3) Individuales - 4) Constelaciones */}
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {[
-              formatosAcompanamiento.bloques[0],
-              formatosAcompanamiento.bloques[2],
-              formatosAcompanamiento.bloques[1],
-              formatosAcompanamiento.bloques[3],
-            ].map((bloque, i) => {
-              const Icon =
-                iconByFormato[bloque.id as keyof typeof iconByFormato] ?? Heart;
-              const isProcesoCrea = bloque.id === "proceso-crea";
-              const isIntensivo = bloque.id === "intensivo";
-              const colSpan =
-                isIntensivo || isProcesoCrea ? "lg:col-span-2" : "";
-              const whatsappHref =
-                bloque.id === "intensivo"
-                  ? WHATSAPP_URL_ENCUENTROS
-                  : WHATSAPP_URL_WITH_MESSAGE;
-              return (
-                <motion.article
-                  key={bloque.id}
-                  className={cn(
-                    "group relative flex flex-col rounded-3xl border bg-[var(--color-surface)] p-8 transition-all hover:shadow-2xl hover:shadow-[var(--color-primary)]/5",
-                    colSpan,
-                    isIntensivo
-                      ? "border-2 border-[var(--color-primary)]/40 shadow-xl shadow-[var(--color-primary)]/10"
-                      : "border border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30"
-                  )}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                >
-                  {isIntensivo && (
-                    <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 rounded-full bg-[var(--color-primary)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
-                      Destacado
-                    </div>
-                  )}
-                  <div
-                    className={cn(
-                      "mb-6 flex size-14 shrink-0 items-center justify-center rounded-2xl transition-transform",
-                      isIntensivo
-                        ? "bg-[var(--color-primary)] text-white group-hover:rotate-6"
-                        : "bg-[var(--color-primary)]/10 text-[var(--color-primary)] group-hover:scale-110"
-                    )}
-                  >
-                    <Icon className="size-7" />
-                  </div>
-                  <h3 className="heading-md mb-3 text-[var(--color-primary-dark)]">
-                    {bloque.titulo}
-                  </h3>
-                  <p className="mb-4 flex-1 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                    {bloque.descripcion}
-                  </p>
-                  {"detalle" in bloque && bloque.detalle && (
-                    <p className="mb-4 text-sm text-[var(--color-text-muted)]">
-                      {bloque.detalle}
-                    </p>
-                  )}
-                  {"nota" in bloque && bloque.nota && (
-                    <p className="mb-4 text-sm font-serif text-[var(--color-text-muted)]">
-                      {bloque.nota}
-                    </p>
-                  )}
-                  {"duracion" in bloque && bloque.duracion && (
-                    <p className="mb-1 text-xs font-medium text-[var(--color-primary)]">
-                      {bloque.duracion}
-                    </p>
-                  )}
-                  {"modalidad" in bloque && bloque.modalidad && (
-                    <p className="mb-2 text-xs text-[var(--color-text-muted)]">
-                      {bloque.modalidad}
-                    </p>
-                  )}
-                  {"extra" in bloque && bloque.extra && (
-                    <p className="mb-4 text-xs font-semibold text-[var(--color-primary)]">
-                      {bloque.extra}
-                    </p>
-                  )}
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      "mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all",
-                      isIntensivo
-                        ? "bg-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-primary)]/20 hover:shadow-xl"
-                        : "border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                    )}
-                  >
-                    {bloque.cta}
-                  </a>
-                </motion.article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* 9. EXPERIENCIAS (slider solo de reviews) */}
       <section id="experiencias" className="section-padding bg-[var(--color-surface)] scroll-mt-20">
         <div className="container-inner">
@@ -533,7 +531,7 @@ export default function HomePage() {
                   <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Proceso profundo C.R.E.A. - Sesiones individuales de 4 encuentros consecutivos</h4>
                 </div>
                 <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Proceso profundo C.R.E.A. -  Sesiones individuales de 4 encuentros consecutivos</h4>
+                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Sesiones individuales de 4 encuentros consecutivos - "Proceso profundo C.R.E.A."</h4>
                   <p className="w-full text-sm text-[var(--color-text-muted)]">Inicio de proceso personalizado con el Método C.R.E.A. Consultá disponibilidad para coordinar fechas y frecuencia.</p>
                   <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
@@ -541,23 +539,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </a>
-              <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
-                <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
-                  <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
-                    <span className="text-lg font-bold md:text-xl">Mayo</span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">2026</span>
-                  </div>
-                  <h4 className="min-w-0 flex-1 font-serif text-lg font-bold text-[var(--color-primary-dark)] md:hidden">Creando Mi Nuevo YO - Programa Intensivo de Sanación y Transformación Personal</h4>
-                </div>
-                <div className="mt-3 flex min-w-0 flex-1 flex-col gap-2 md:mt-0">
-                  <h4 className="hidden font-serif text-xl font-bold text-[var(--color-primary-dark)] md:block">Creando Mi Nuevo YO - Programa Intensivo de Sanación y Transformación Personal</h4>
-                  <p className="w-full text-sm text-[var(--color-text-muted)]">Intensivo de creación consciente. 3 encuentros anuales.</p>
-                  <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-[var(--color-text-muted)]">
-                    <span className="flex items-center gap-1"><Clock className="size-4" />Inscripciones Abiertas</span>
-                    <span className="flex items-center gap-1"><MapPin className="size-4" />Presencial u online</span>
-                  </div>
-                </div>
-              </a>
+
             </div>
           </div>
         </div>
