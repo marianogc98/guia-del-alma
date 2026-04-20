@@ -27,7 +27,7 @@ import {
   reviews,
 } from "./lib/data/content";
 import ReviewsSlider from "./components/ui/ReviewsSlider";
-import { WHATSAPP_URL_WITH_MESSAGE, WHATSAPP_URL_ENCUENTROS } from "./lib/data/site";
+import { WHATSAPP_URL_WITH_MESSAGE } from "./lib/data/site";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -259,41 +259,20 @@ export default function HomePage() {
               const Icon =
                 iconByFormato[bloque.id as keyof typeof iconByFormato] ?? Heart;
               const isProcesoCrea = bloque.id === "proceso-crea";
-              const isIntensivo = bloque.id === "intensivo";
-              const colSpan =
-                isIntensivo || isProcesoCrea ? "lg:col-span-2" : "";
-              const whatsappHref =
-                bloque.id === "intensivo"
-                  ? WHATSAPP_URL_ENCUENTROS
-                  : WHATSAPP_URL_WITH_MESSAGE;
+              const colSpan = isProcesoCrea ? "lg:col-span-2" : "";
               return (
                 <motion.article
                   key={bloque.id}
                   className={cn(
-                    "group relative flex flex-col rounded-3xl border bg-[var(--color-surface)] p-8 transition-all hover:shadow-2xl hover:shadow-[var(--color-primary)]/5",
+                    "group relative flex flex-col rounded-3xl border border-[var(--color-primary)]/10 bg-[var(--color-surface)] p-8 transition-all hover:shadow-2xl hover:shadow-[var(--color-primary)]/5 hover:border-[var(--color-primary)]/30",
                     colSpan,
-                    isIntensivo
-                      ? "border-2 border-[var(--color-primary)]/40 shadow-xl shadow-[var(--color-primary)]/10"
-                      : "border border-[var(--color-primary)]/10 hover:border-[var(--color-primary)]/30"
                   )}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  {isIntensivo && (
-                    <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 rounded-full bg-[var(--color-primary)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
-                      Destacado
-                    </div>
-                  )}
-                  <div
-                    className={cn(
-                      "mb-6 flex size-14 shrink-0 items-center justify-center rounded-2xl transition-transform",
-                      isIntensivo
-                        ? "bg-[var(--color-primary)] text-white group-hover:rotate-6"
-                        : "bg-[var(--color-primary)]/10 text-[var(--color-primary)] group-hover:scale-110"
-                    )}
-                  >
+                  <div className="mb-6 flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] transition-transform group-hover:scale-110">
                     <Icon className="size-7" />
                   </div>
                   <h3 className="heading-md mb-3 text-[var(--color-primary-dark)]">
@@ -328,15 +307,10 @@ export default function HomePage() {
                     </p>
                   )}
                   <a
-                    href={whatsappHref}
+                    href={WHATSAPP_URL_WITH_MESSAGE}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={cn(
-                      "mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all",
-                      isIntensivo
-                        ? "bg-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-primary)]/20 hover:shadow-xl"
-                        : "border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                    )}
+                    className="mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
                   >
                     {bloque.cta}
                   </a>
