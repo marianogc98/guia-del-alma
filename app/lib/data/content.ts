@@ -136,6 +136,83 @@ export const formatosAcompanamiento = {
 
 
 
+/** Encuentro presencial "La Clave de tu Transformación" (landing propia) */
+export const claveTransformacion = {
+  eyebrow: "Jessica Frutos · Guía del Alma",
+  title: "La Clave de tu Transformación",
+  subtitle:
+    "Un encuentro presencial y vivencial para liberarte de las heridas del pasado que siguen condicionando tu presente y recuperar tu poder personal.",
+  fechaResumen: "29 de agosto · 18 a 20 hs · Córdoba Capital",
+  cta: "Quiero reservar mi lugar",
+  intro: {
+    title:
+      "¿Y si aquello que viviste todavía está influyendo en tu vida de hoy?",
+    parrafos: [
+      "A veces una pérdida, un rechazo, una injusticia, un abandono o una experiencia dolorosa no queda solamente en el pasado. Puede seguir influyendo en la manera en que nos vinculamos, decidimos, nos valoramos y nos permitimos avanzar.",
+      "Este encuentro nace para mirar esa historia desde otro lugar y abrir un espacio de comprensión, liberación y transformación.",
+    ],
+  },
+  talVezTePasa: {
+    title: "Tal vez te pasa que…",
+    items: [
+      "Sentís que hay situaciones que se repiten aunque quieras cambiarlas.",
+      "Reaccionás desde emociones que parecen venir de mucho más atrás.",
+      "Te cuesta soltar algo que racionalmente sabés que ya pasó.",
+      "Sentís que una parte de tu historia todavía tiene demasiado poder sobre vos.",
+    ],
+  },
+  propuesta: {
+    title: "En este encuentro vamos a mirar tu historia con otros ojos.",
+    parrafo:
+      "Desde una mirada sistémica y vivencial, vamos a reconocer aquello que quedó pendiente de integrar y trabajar sobre las emociones y experiencias que continúan condicionando tu presente.",
+    beneficios: [
+      {
+        id: "comprender",
+        titulo: "Comprender",
+        texto: "Reconocer qué puede estar sosteniendo aquello que hoy te limita.",
+      },
+      {
+        id: "liberar",
+        titulo: "Liberar",
+        texto:
+          "Abrir un espacio interno para soltar cargas emocionales del pasado.",
+      },
+      {
+        id: "recuperar",
+        titulo: "Recuperar",
+        texto:
+          "Volver a conectar con tu poder personal y con nuevas posibilidades.",
+      },
+    ],
+  },
+  experiencia: {
+    title: "La experiencia",
+    datos: [
+      { id: "fecha", label: "Fecha", valor: "29 de agosto" },
+      { id: "horario", label: "Horario", valor: "18:00 a 20:00 hs" },
+      {
+        id: "lugar",
+        label: "Lugar",
+        valor: "Espacio Vida Plena",
+        detalle: "Jujuy 42 · 6.º piso · Córdoba Capital",
+      },
+      { id: "modalidad", label: "Modalidad", valor: "Presencial · Vivencial" },
+    ],
+    inversionLabel: "Inversión",
+    precio: "$50.000",
+    precioNota: "Valor especial hasta el 22 de agosto. Luego: $55.000.",
+    cupos:
+      "Los cupos son limitados para cuidar la experiencia y el espacio de trabajo.",
+  },
+  reservar: {
+    eyebrow: "Tu transformación comienza con una decisión",
+    title: "¿Sentís que este encuentro es para vos?",
+    parrafo:
+      "Si estás lista para dejar de cargar con aquello que pertenece al pasado y comenzar a recuperar tu poder personal, te invito a ser parte.",
+    nota: "Escribime por WhatsApp para recibir los datos de inscripción.",
+  },
+} as const;
+
 export const quienAcompana = {
   title: "Una agenda consciente",
   parrafo1:

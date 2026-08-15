@@ -7,10 +7,16 @@ import {
   WHATSAPP_URL_ENCUENTROS,
   WHATSAPP_CTA,
 } from "@/app/lib/data/site";
+import {
+  trackWhatsappClick,
+  type WhatsappOrigen,
+} from "@/app/lib/utils/analytics";
 import { cn } from "@/app/lib/utils/cn";
 
 type Props = {
   variant?: "primary" | "secondary" | "footer";
+  /** Origen del clic para el evento `whatsapp_click` */
+  origen: WhatsappOrigen;
   className?: string;
   label?: string;
   /** Usar mensaje prearmado (recomendado para CTAs principales) */
@@ -21,6 +27,7 @@ type Props = {
 
 export default function WhatsAppButton({
   variant = "primary",
+  origen,
   className,
   label = WHATSAPP_CTA,
   usePredefinedMessage = true,
@@ -48,6 +55,7 @@ export default function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsappClick(origen)}
       className={cn(base, styles[variant], className)}
       aria-label="Abrir WhatsApp"
     >

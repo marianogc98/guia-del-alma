@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { trackGenerateLead } from "@/app/lib/utils/analytics";
 
 export type ContactFormData = {
   nombre: string;
@@ -59,9 +60,7 @@ export function useContactForm() {
       setState({ status: "success", message: "Mensaje enviado correctamente." });
       setFormData(initialFormData);
 
-      if (typeof window !== "undefined" && window.umami?.track) {
-        window.umami.track("contact-form-submitted", { page: "contacto" });
-      }
+      trackGenerateLead("contacto");
     } catch {
       setState({
         status: "error",

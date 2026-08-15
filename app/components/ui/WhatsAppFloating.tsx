@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL_WITH_MESSAGE } from "@/app/lib/data/site";
+import { trackWhatsappClick } from "@/app/lib/utils/analytics";
 import { cn } from "@/app/lib/utils/cn";
 
 type Props = {
@@ -23,6 +24,7 @@ export default function WhatsAppFloating({
       href={WHATSAPP_URL_WITH_MESSAGE}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsappClick("flotante")}
       className={cn(
         "fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-medium text-white shadow-lg transition-all hover:bg-[#20bd5a] hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2",
         !label && "p-3",

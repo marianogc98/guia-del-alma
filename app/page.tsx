@@ -28,6 +28,7 @@ import {
 } from "./lib/data/content";
 import ReviewsSlider from "./components/ui/ReviewsSlider";
 import { WHATSAPP_URL_WITH_MESSAGE } from "./lib/data/site";
+import { trackWhatsappClick } from "@/app/lib/utils/analytics";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -94,6 +95,7 @@ export default function HomePage() {
                   href={WHATSAPP_URL_WITH_MESSAGE}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsappClick("home_hero")}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--color-primary)] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-[var(--color-primary)]/25 transition-transform hover:-translate-y-0.5 hover:bg-[var(--color-primary-light)]"
                 >
                   {hero.cta}
@@ -310,6 +312,7 @@ export default function HomePage() {
                     href={WHATSAPP_URL_WITH_MESSAGE}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsappClick(`servicios_${bloque.id}`)}
                     className="mt-auto block w-full rounded-lg py-3 text-center text-sm font-bold transition-all border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
                   >
                     {bloque.cta}
@@ -479,7 +482,7 @@ export default function HomePage() {
             </div>
             {/* Tarjetas de próximas fechas */}
             <div className="space-y-6 lg:col-span-7">
-              <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
+              <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("home_fechas_constelaciones")} className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
                     <span className="text-lg font-bold md:text-xl"></span>
@@ -496,7 +499,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </a>
-              <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
+              <a href={WHATSAPP_URL_WITH_MESSAGE} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("home_fechas_proceso_crea")} className="flex flex-col rounded-2xl border border-[var(--color-surface-alt)] bg-[var(--color-surface)] p-6 transition-all hover:border-[var(--color-primary)]/30 md:flex-row md:gap-6">
                 <div className="flex flex-row items-center gap-3 md:flex-col md:shrink-0">
                   <div className="flex size-14 shrink-0 flex-col items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] md:size-16">
                     <span className="text-lg font-bold md:text-xl"></span>

@@ -17,10 +17,17 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_MESSAGE_ENCUENTROS =
   "Hola, me gustaría consultar por encuentros o reservar una sesión.";
 
+/** Mensaje para el encuentro "La Clave de tu Transformación" */
+export const WHATSAPP_MESSAGE_CLAVE_TRANSFORMACION =
+  "Hola Jessica, quiero reservar mi lugar en La Clave de tu Transformación.";
+
 /** URL de WhatsApp con mensaje predefinido (para CTAs principales) */
 export const WHATSAPP_URL_WITH_MESSAGE = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 /** URL de WhatsApp con mensaje de encuentros */
 export const WHATSAPP_URL_ENCUENTROS = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_MESSAGE_ENCUENTROS)}`;
+
+/** URL de WhatsApp para reservar en "La Clave de tu Transformación" */
+export const WHATSAPP_URL_CLAVE_TRANSFORMACION = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_MESSAGE_CLAVE_TRANSFORMACION)}`;
 
 export const WHATSAPP_CTA = "Escribime por WhatsApp";

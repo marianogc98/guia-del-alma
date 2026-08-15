@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import "./globals.css";
-import Umami from "./components/Umami";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MetaPixel from "./components/MetaPixel";
 import Header from "./components/layout/Header";
@@ -52,7 +51,6 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${plusJakarta.variable} ${lora.variable}`}>
       <body className="min-h-screen flex flex-col font-sans antialiased">
-        <Umami />
         <GoogleAnalytics />
         <MetaPixel />
         <Header />
