@@ -59,6 +59,12 @@ export function trackViewPrecio() {
   gaEvent("view_precio", { origen: "clave_transformacion" });
 }
 
+/** Clic en "Comprar" del ebook, justo antes de ir a Mercado Pago */
+export function trackIniciarCompraEbook(valor: number) {
+  gaEvent("begin_checkout", { currency: "ARS", value: valor, items: [{ item_name: "ebook" }] });
+  metaEvent("InitiateCheckout", { currency: "ARS", value: valor });
+}
+
 /** Envío exitoso del formulario de contacto */
 export function trackGenerateLead(formName: string) {
   gaEvent("generate_lead", { form_name: formName });

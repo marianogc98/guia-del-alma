@@ -1,4 +1,4 @@
-# Etapa 1: build de Next.js (export estático -> out/)
+# Etapa 1: build de Next.js (standalone)
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -9,12 +9,21 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Etapa 2: nginx sirve la carpeta out
-FROM nginx:alpine
+# Etapa 2: servidor Node
+FROM node:20-alpine AS runner
 
-COPY --from=builder /app/out /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
-EXPOSE 80
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+# Migraciones SQL (se aplican al arrancar, ver instrumentation.ts)
+COPY --from=builder /app/drizzle ./drizzle
 
-CMD ["nginx", "-g", "daemon off;"]
+USER node
+EXPOSE 3000
+
+CMD ["node", "server.js"]
