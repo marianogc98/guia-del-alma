@@ -15,7 +15,18 @@ export function normalizarCodigo(valor: string) {
   return `ALMA-${sinPrefijo.slice(0, 4)}-${sinPrefijo.slice(4)}`;
 }
 
+/**
+ * Código único compartido para quienes pagan por transferencia (Jessica lo
+ * envía por WhatsApp). Si se filtra, se cambia la env y deja de valer el anterior.
+ */
+function codigoTransferencia() {
+  const valor = process.env.EBOOK_CODIGO_TRANSFERENCIA;
+  return valor ? normalizarCodigo(valor) : null;
+}
+
 export async function codigoValido(codigo: string) {
+  if (codigo === codigoTransferencia()) return true;
+
   const [order] = await getDb()
     .select({ uid: orders.uid })
     .from(orders)

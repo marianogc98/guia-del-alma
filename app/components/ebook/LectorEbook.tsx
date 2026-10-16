@@ -62,9 +62,11 @@ export default function LectorEbook({ marcaDeAgua }: { marcaDeAgua: string }) {
     let tareaCarga: PDFDocumentLoadingTask | null = null;
     (async () => {
       try {
-        const pdfjs = await import("pdfjs-dist");
+        // Build "legacy": trae polyfills para navegadores de celular (el build
+        // moderno usa APIs como Map.getOrInsertComputed y queda en blanco).
+        const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
         pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-          "pdfjs-dist/build/pdf.worker.min.mjs",
+          "pdfjs-dist/legacy/build/pdf.worker.min.mjs",
           import.meta.url
         ).toString();
         const data = await cargarLibro();
@@ -104,7 +106,8 @@ export default function LectorEbook({ marcaDeAgua }: { marcaDeAgua: string }) {
       const base = page.getViewport({ scale: 1 });
       const escala = (Math.min(anchoDisponible, 900) / base.width) * zoom;
       const viewport = page.getViewport({ scale: escala });
-      const dpr = window.devicePixelRatio || 1;
+      // Tope en 2: en celulares con densidad 3 el canvas puede pasar el límite de memoria.
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const canvas = canvasRef.current!;
       canvas.width = Math.floor(viewport.width * dpr);
       canvas.height = Math.floor(viewport.height * dpr);
@@ -118,7 +121,11 @@ export default function LectorEbook({ marcaDeAgua }: { marcaDeAgua: string }) {
         transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : undefined,
       });
       renderRef.current = tarea;
-      await tarea.promise.catch(() => {});
+      await tarea.promise.catch((err: Error) => {
+        if (err?.name === "RenderingCancelledException" || cancelado) return;
+        console.error(err);
+        setError("No pudimos mostrar esta página. Recargá la página para intentar de nuevo.");
+      });
     })();
     try {
       localStorage.setItem(CLAVE_PAGINA, String(pagina));

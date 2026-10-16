@@ -3,8 +3,7 @@
  * servidor (en pesos, sin centavos) y nunca los manda el cliente.
  */
 export const EBOOK = {
-  /** TODO: reemplazar por el título definitivo */
-  titulo: "Ebook Guía del Alma",
+  titulo: "Autoconstelaciones",
   moneda: "ARS",
 } as const;
 
