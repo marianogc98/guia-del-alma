@@ -1,4 +1,5 @@
 import { BookOpen, KeyRound, Lock } from "lucide-react";
+import IngresarCodigo from "@/app/components/ebook/IngresarCodigo";
 import MercadoPagoBoton from "@/app/components/ui/MercadoPagoBoton";
 import TransferenciaDatos from "@/app/components/ui/TransferenciaDatos";
 import {
@@ -19,9 +20,9 @@ const pasos = [
 export default async function EbookPage({
   searchParams,
 }: {
-  searchParams: Promise<{ pago?: string }>;
+  searchParams: Promise<{ pago?: string; acceso?: string }>;
 }) {
-  const { pago } = await searchParams;
+  const { pago, acceso } = await searchParams;
   const precioMp = precioMpCentavos();
   const precioTransf = precioTransferenciaCentavos();
   const descuento =
@@ -104,6 +105,24 @@ export default async function EbookPage({
             <div className="mt-6">
               <MercadoPagoBoton precio={precioMp / 100} />
             </div>
+          </div>
+        </div>
+
+        {/* Ya compraste */}
+        <div
+          id="codigo"
+          className="mx-auto mt-12 max-w-4xl scroll-mt-24 rounded-2xl border border-[var(--color-primary)]/10 bg-white p-8 shadow-sm"
+        >
+          <h2 className="heading-md text-[var(--color-primary-dark)]">
+            ¿Ya compraste? Ingresá tu código
+          </h2>
+          <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+            {acceso === "requerido"
+              ? "Para leer el libro necesitás tu código de acceso."
+              : "Escribí el código que recibiste para empezar a leer."}
+          </p>
+          <div className="mt-6">
+            <IngresarCodigo />
           </div>
         </div>
       </div>

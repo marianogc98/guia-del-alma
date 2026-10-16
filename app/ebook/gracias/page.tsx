@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { eq } from "drizzle-orm";
 import { CheckCircle, Clock } from "lucide-react";
+import IngresarCodigo from "@/app/components/ebook/IngresarCodigo";
 import { EBOOK } from "@/app/lib/data/ebook";
 import { getDb } from "@/app/lib/db";
 import { orders } from "@/app/lib/db/schema";
@@ -51,6 +52,9 @@ export default async function GraciasPage({
               <p className="mt-6 rounded-xl border border-dashed border-[var(--color-primary)]/40 bg-[var(--color-surface)] px-6 py-4 font-mono text-2xl font-bold tracking-widest text-[var(--color-primary-dark)]">
                 {order.accessCode}
               </p>
+              <div className="mt-8">
+                <IngresarCodigo codigoInicial={order.accessCode ?? ""} />
+              </div>
             </>
           ) : order ? (
             <>

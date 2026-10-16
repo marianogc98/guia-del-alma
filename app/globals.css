@@ -69,3 +69,10 @@
     @apply text-2xl font-semibold tracking-tight;
   }
 }
+
+/* El lector del ebook no se imprime */
+@media print {
+  body:has(.lector-ebook) {
+    display: none !important;
+  }
+}
