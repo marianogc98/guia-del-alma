@@ -59,9 +59,20 @@ export function trackViewPrecio() {
   gaEvent("view_precio", { origen: "clave_transformacion" });
 }
 
-/** Clic en "Comprar" del ebook, justo antes de ir a Mercado Pago */
-export function trackIniciarCompraEbook(valor: number) {
-  gaEvent("begin_checkout", { currency: "ARS", value: valor, items: [{ item_name: "ebook" }] });
+/**
+ * Inicio de compra del ebook: clic en "Pagar con Mercado Pago" (antes de
+ * redirigir) o en "Enviar comprobante por WhatsApp" (transferencia).
+ */
+export function trackIniciarCompraEbook(
+  valor: number,
+  metodo: "mercadopago" | "transferencia"
+) {
+  gaEvent("begin_checkout", {
+    currency: "ARS",
+    value: valor,
+    payment_type: metodo,
+    items: [{ item_name: "ebook" }],
+  });
   metaEvent("InitiateCheckout", { currency: "ARS", value: valor });
 }
 

@@ -4,7 +4,7 @@ import { getDb } from "@/app/lib/db";
 import { orders } from "@/app/lib/db/schema";
 import { confirmarPago } from "@/app/lib/orders/confirmar";
 import { enviarMailCompra } from "@/app/lib/orders/email";
-import { getPago, siteUrl } from "@/app/lib/payments/mercadopago";
+import { datosComprador, getPago, siteUrl } from "@/app/lib/payments/mercadopago";
 
 /**
  * Vuelta del navegador desde Mercado Pago. El querystring (`status=...`)
@@ -52,6 +52,7 @@ export async function GET(request: NextRequest) {
       providerRef: String(pago.id),
       amountCentavos: Math.round(pago.transaction_amount * 100),
       currency: pago.currency_id,
+      ...datosComprador(pago),
     });
     if (r.ok && !r.yaEstaba) {
       await enviarMailCompra(r.order).catch((err) =>

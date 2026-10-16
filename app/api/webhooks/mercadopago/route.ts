@@ -2,7 +2,7 @@ import { createHmac, timingSafeEqual } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { confirmarPago } from "@/app/lib/orders/confirmar";
 import { enviarMailCompra } from "@/app/lib/orders/email";
-import { getPago } from "@/app/lib/payments/mercadopago";
+import { datosComprador, getPago } from "@/app/lib/payments/mercadopago";
 
 function firmaValida(request: NextRequest, dataId: string) {
   const secret = process.env.MP_WEBHOOK_SECRET;
@@ -58,6 +58,7 @@ export async function POST(request: NextRequest) {
         providerRef: String(pago.id),
         amountCentavos: Math.round(pago.transaction_amount * 100),
         currency: pago.currency_id,
+        ...datosComprador(pago),
       });
       if (!r.ok) {
         console.error(`[ebook] Webhook no confirmó pago ${pago.id}: ${r.reason}`);

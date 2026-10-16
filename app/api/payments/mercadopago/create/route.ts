@@ -1,13 +1,15 @@
 import { randomUUID } from "crypto";
-import { NextRequest, NextResponse } from "next/server";
-import { EBOOK } from "@/app/lib/data/ebook";
+import { NextResponse } from "next/server";
+import { EBOOK, precioMpCentavos } from "@/app/lib/data/ebook";
 import { getDb } from "@/app/lib/db";
 import { orders } from "@/app/lib/db/schema";
 import { crearPreferencia, mpConfigurado } from "@/app/lib/payments/mercadopago";
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-export async function POST(request: NextRequest) {
+/**
+ * Crea la orden y la preferencia de pago. No pide datos al comprador:
+ * nombre y email se toman del pago de Mercado Pago al confirmarlo.
+ */
+export async function POST() {
   if (!mpConfigurado()) {
     return NextResponse.json(
       { message: "Pagos no configurados." },
@@ -15,37 +17,20 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const body = (await request.json().catch(() => null)) as {
-    email?: unknown;
-    name?: unknown;
-  } | null;
-  const email = typeof body?.email === "string" ? body.email.trim() : "";
-  const name = typeof body?.name === "string" ? body.name.trim() : "";
-
-  if (!name || name.length > 120 || !emailRegex.test(email) || email.length > 200) {
-    return NextResponse.json(
-      { message: "Revisá tu nombre y email." },
-      { status: 400 }
-    );
-  }
-
   const uid = randomUUID();
+  const amount = precioMpCentavos();
 
   try {
     await getDb().insert(orders).values({
       uid,
-      email,
-      name,
-      amount: EBOOK.precioCentavos,
+      amount,
       currency: EBOOK.moneda,
     });
 
     const pref = await crearPreferencia({
       uid,
-      amountCentavos: EBOOK.precioCentavos,
+      amountCentavos: amount,
       titulo: EBOOK.titulo,
-      email,
-      nombre: name,
     });
 
     return NextResponse.json({ url: pref.init_point });

@@ -41,14 +41,10 @@ export async function crearPreferencia({
   uid,
   amountCentavos,
   titulo,
-  email,
-  nombre,
 }: {
   uid: string;
   amountCentavos: number;
   titulo: string;
-  email: string;
-  nombre: string;
 }) {
   const volver = `${siteUrl()}/api/payments/mercadopago/return?uid=${uid}`;
   return llamar<{ id: string; init_point: string }>("/checkout/preferences", {
@@ -65,7 +61,6 @@ export async function crearPreferencia({
         },
       ],
       external_reference: uid,
-      payer: { name: nombre, email },
       back_urls: { success: volver, pending: volver, failure: volver },
       auto_return: "approved",
       notification_url: `${siteUrl()}/api/webhooks/mercadopago`,
@@ -80,7 +75,17 @@ export type PagoMP = {
   external_reference: string | null;
   transaction_amount: number;
   currency_id: string;
+  payer?: { email?: string | null; first_name?: string | null; last_name?: string | null };
 };
+
+/** Email y nombre del comprador según el pago (pueden venir vacíos). */
+export function datosComprador(pago: PagoMP) {
+  const email = pago.payer?.email?.trim() || null;
+  const nombre =
+    [pago.payer?.first_name, pago.payer?.last_name].filter(Boolean).join(" ").trim() ||
+    null;
+  return { email, nombre };
+}
 
 export function getPago(id: string) {
   return llamar<PagoMP>(`/v1/payments/${encodeURIComponent(id)}`);

@@ -7,8 +7,9 @@ import { integer, pgTable, text, timestamp } from "drizzle-orm/pg-core";
  */
 export const orders = pgTable("orders", {
   uid: text("uid").primaryKey(),
-  email: text("email").notNull(),
-  name: text("name").notNull(),
+  /** Se completan con los datos del pagador de Mercado Pago al confirmar. */
+  email: text("email"),
+  name: text("name"),
   status: text("status", { enum: ["pending", "paid"] })
     .notNull()
     .default("pending"),

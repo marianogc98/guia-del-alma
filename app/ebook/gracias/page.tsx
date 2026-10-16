@@ -39,8 +39,14 @@ export default async function GraciasPage({
                 ¡Gracias por tu compra!
               </h1>
               <p className="mt-4 text-[var(--color-text-muted)]">
-                Este es tu código de acceso a <strong>{EBOOK.titulo}</strong>. También te lo
-                enviamos a <strong>{order.email}</strong>.
+                Este es tu código de acceso a <strong>{EBOOK.titulo}</strong>.{" "}
+                {order.email ? (
+                  <>
+                    También te lo enviamos a <strong>{order.email}</strong>.
+                  </>
+                ) : (
+                  "Guardalo, lo vas a necesitar para leer el ebook."
+                )}
               </p>
               <p className="mt-6 rounded-xl border border-dashed border-[var(--color-primary)]/40 bg-[var(--color-surface)] px-6 py-4 font-mono text-2xl font-bold tracking-widest text-[var(--color-primary-dark)]">
                 {order.accessCode}
@@ -53,8 +59,8 @@ export default async function GraciasPage({
                 Estamos confirmando tu pago
               </h1>
               <p className="mt-4 text-[var(--color-text-muted)]">
-                Apenas Mercado Pago lo acredite, te enviamos tu código de acceso a{" "}
-                <strong>{order.email}</strong>. Puede tardar unos minutos.
+                Apenas Mercado Pago lo acredite, te enviamos tu código de acceso al email de
+                tu cuenta de Mercado Pago. Puede tardar unos minutos.
               </p>
             </>
           ) : (

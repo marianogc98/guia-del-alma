@@ -25,11 +25,15 @@ export async function confirmarPago({
   providerRef,
   amountCentavos,
   currency,
+  email,
+  nombre,
 }: {
   uid: string;
   providerRef: string;
   amountCentavos: number;
   currency: string;
+  email: string | null;
+  nombre: string | null;
 }): Promise<ResultadoConfirmar> {
   return getDb().transaction(async (tx) => {
     const [order] = await tx
@@ -64,6 +68,8 @@ export async function confirmarPago({
         providerRef,
         paidAt: new Date(),
         accessCode: generarCodigo(),
+        email: order.email ?? email,
+        name: order.name ?? nombre,
       })
       .where(eq(orders.uid, uid))
       .returning();
